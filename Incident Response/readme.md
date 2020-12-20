@@ -24,9 +24,10 @@ The analysis step focuses on actions to investigate the incident and better unde
 While remediation the aim is to remove the incident causing circumstances and implement measures to decrease the overall residual risk for the society and the organization.
 
 * **Recovery**
-During recovery
+During recovery all efforts will be summed up to re-create the original state of the affected systems and data and to re-enable the critical business path as well as regular business in corresponding time frames.
 
-* **Post Mortem**
+* **Post Morten**
+This step includes tips to learn and improve the incident handling process for the future.
 
 ## Formats
 It is planned to design the playbooks according to multiple standards and formats wherefore the structure may be changed to match the target framework. (E.g. Hive templates). Anyway will the structure  be used throughout every human-readable format.
