@@ -2,10 +2,8 @@
 
 This collection aims to help organizations and individuals by preparing or handling certain known types of security incidents. All playbooks will follow the same structure which will be outline below. Feel free to use, modify and share this work as well as help increase and enhance it. Every support is welcome!
 
-## Structure
-Alls playbooks follow this strcuture. Please always bear in mind that this is not necessary a chronological order. More often steps have to be done in parallel to react accordingly. Always use the information shared only as a baseline and tweak your response plan accordingly.
-
-
+## Structure 
+All playbooks follow this structure. Please always bear in mind that this is not necessary in a chronological order. More often steps have to be done in parallel to react accordingly. Always use the information shared only as a baseline and tweak your response plan accordingly.
 
 * **Metadata**
 This section will include all necessary metadata fields to map and classify the playbook.
@@ -17,25 +15,26 @@ This step will include all necessary actions that help to prepare or even defend
 The detection step describes known hard indicators to verify the incident and give it the proper attention. This includes actions to verify the scope of the incident.
 
 * **Containment / Mitigation**
-Containment is about reducing the scope or impact of the security incident as an immediate action while preserving information that may be needed later on during invistigation of the incident or legeslaive steps.
+Containment is about reducing the scope or impact of the security incident as an immediate action while preserving information that may be needed later on during investigation of the incident or legislative steps.
 
 * **Analysis**
-The analysis step focuses on actions to investigate the incident and better understand the overall impact, the attack chain and other crucial informtaion needed for propper remediation efforts. These steps often will require properly trained personel that might even need to be pulled in from a third party.
+The analysis step focuses on actions to investigate the incident and better understand the overall impact, the attack chain and other crucial information needed for proper remediation efforts. These steps will often require properly trained personnel that might even need to be pulled in from a third party.
 
 * **Remediation**
 While remediation the aim is to remove the incident causing circumstances and implement measures to decrease the overall residual risk for the society and the organization.
 
 * **Recovery**
+During recovery
 
 * **Post Mortem**
 
 ## Formats
-It is planned to design the playbooks according to multiple standards and formats wherefore the strcuture may be changed to match the target framework. (E.g. Hive templates). Anyway will the strcuture be used throughout every human readable format.
+It is planned to design the playbooks according to multiple standards and formats wherefore the structure may be changed to match the target framework. (E.g. Hive templates). Anyway will the structure  be used throughout every human-readable format.
 
 Focus lays in PDF and Markdown Playbooks but other sources may be included.
 
 Currently planned:
 * PDF
-* Makrdown
+* Markdown
 * Hive Template
 * COPS
