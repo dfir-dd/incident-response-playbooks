@@ -8,10 +8,10 @@ All playbooks follow this structure. Please always bear in mind that this is not
 * **Metadata**
 This section will include all necessary metadata fields to map and classify the playbook.
 
-* **Preparation****
+* **Preparation**
 This step will include all necessary actions that help to prepare or even defend against a certain incident. Including preventive tasks, best practices, log sources, documentation and much more. This information will be specific to the described incident case and will not include general tasks like building your incident team etc. since this will be equal in every incident case.
 
-* **Detection / Discovery****
+* **Detection / Discovery**
 The detection step describes known hard indicators to verify the incident and give it the proper attention. This includes actions to verify the scope of the incident.
 
 * **Containment / Mitigation**
