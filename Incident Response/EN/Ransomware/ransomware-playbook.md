@@ -27,12 +27,21 @@ In the event of a ransomware-attack fast response is critical since this could s
 * Cyber insurance
 * Ransom payment
 * decisions
-* Backup Strategy
+* Backup Strategy (remove from domain)
 * Save Logs from destruction
 * Central Logging
 * Restrict Admin Accounts
 * Patch Management
-* Firewall / VLAN
+* Firewall / VLAN also for VMs  / IDS
+* hardening
+* remove old systems / smbv1
+* proxy
+* vpn
+* end user /  support awareness
+* mail spam / mail attachement filter
+* disable makros and makro documents
+* software whitelists
+* Disable Windows Script Host
 * technology to scan network and hosts for iocs
 
 ## Detection / Discovery
