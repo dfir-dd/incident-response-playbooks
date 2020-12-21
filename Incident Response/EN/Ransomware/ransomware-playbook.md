@@ -6,6 +6,10 @@ Ransomware became one of the most lucrative cyberattacks in the recent years and
 
 In the event of a ransomware-attack fast response is critical since this could stop ongoing encryption and lateral movement. Most times a hard organization-wide shutdown can't be avoided but the recovery time can highly depend upon the maturity of the incident response program of the organization. 
 
+Ransomware events are most likely only the end of an ongoing infiltration of a network. In many cases the attackers will already mapped your network and gathered credentials long before. Even the extortion of data over a long time span is not uncommon nowadays.
+
+Ransomware in particular is still mostly focused on Windows based systems and domains. The recommendations in this playbook aim to be universal but may sometimes be specific to Windows systems.
+
 ## Metadata
 
 | | |
@@ -46,12 +50,15 @@ In the event of a ransomware-attack fast response is critical since this could s
 
 ## Detection / Discovery
 
+Detection of Ransomware is normally quite easy since it is a "loud" attack event in its nature. Ransomware events that were successful can most times be identified by:
+* *Ransomware notes:*
+Ransomware notes often come in the form of human-readable text files that include information about what happened (encryption) and how to retrieve the original files (payment). Sometimes also screen backgrounds are changed or new programs are deployed that open up automatically and inform about the ransom.
+* *Encrypted Files:*
+When successful ransomware attacks will encrypt many files on the infected systems, overwriting the original files. The encryption focuses on data that has value speaking of databases and documents and not log files or executables. The encrypted files can be identified by their new file ending which is most likely cryptic or because the file can't be opened and read as normal as before.
+
 * Unusual High CPU load 
 * Unusual High Disk usage 
 * Unusual High read/write access
-* Creation of new files with unknown file marker/format
-* Encrypted Files
-* Newly Created Files with Ransom information
 * AV Events
 * IDS events
 * Beacon file monitoring (file share etc.)
