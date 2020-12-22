@@ -16,6 +16,12 @@ This section will include all necessary metadata fields to map and classify the 
 | **Status**        | Placeholder/Draft/Final               |
 | **Created**       | Date                                  |
 
+* **Description**
+Short description of the attack type and common information that is good to know.
+
+* **Safeguards**
+This step will contain measures to prevent or slow the attack which need to be implemented beforehand
+
 * **Preparation**
 This step will include all necessary actions that help to prepare or even defend against a certain incident. Including preventive tasks, best practices, log sources, documentation and much more. This information will be specific to the described incident case and will not include general tasks like building your incident team etc. since this will be equal in every incident case.
 
