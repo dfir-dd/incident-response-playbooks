@@ -28,8 +28,19 @@ It is important to keep in mind that not only all available components including
 Components that are not longer supported by the vendor or an active community should not be used or only used with great care and additional and appropriate safeguards. 
 
 * **Endpoint Protection:**
+Endpoint protection is about blocking unauthorized changes to a system and to stop the execution of malicious code. 
+This is normally done with (next-gen) anti-virus software that should always be kept up to date. For systems without support for such software application and execution whitelist could be used. 
+Endpoint protection need to span on server and client systems and should be configured to alert in a centralized and immediate manner. 
+
 * **Network segmentation:**
+Network segmentation is about separating the network in multiple network zones that house systems of similar use. A very basic separation could be a three tier network architecture with Client-Zone, Server-Zone and DMZ for Server with external accessibility (internet). 
+The aim of network segmentation is to limit, control and log the the network traffic between the different network zones. to stay with the former example it could be possible to limit the access from the Client-Zone to the Server-Zone to the necessary ports (Web, Mail, ERP... ) and block all other access.
+The more granular and restrictive a network segmentation is built the better but it also gets more troubling to manage. A good configuration management is key to achieve this. 
+Network segmentation can for example be achieved with multiple firewall-interfaces, other means of V-Lans or ACLs on managed switches. When creating a network segmentation the Differenz network segments should be throughly planned and involve all available systems (including Virtual Machines and Networks). 
+
 * **Backup Strategy (remove from domain):**
+
+
 * **Restrict Admin Accounts:**
 * **Firewall / VLAN also for VMs  / IDS:**
 * **hardening:**
