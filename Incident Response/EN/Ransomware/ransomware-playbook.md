@@ -13,31 +13,33 @@
 ## Description
 
 Ransomware attacks can be characterized by infecting large segments of an existing network and encrypting data on server and client systems without the possibility for the legitimate users to get access to this data. The decryption key/mechanism will then be presented to the legitimate user by the attacker in exchange for a more or less reasonable amount of money, most likely in the form of digital currency like bitcoin. The attacker will leave information on the encrypted system on how to contact them for payment and retrieving the decryption methods.
-
 Ransomware became one of the most lucrative cyberattacks in the recent years and is often spread with phishing campaigns against end users or by exploiting unpatched vulnerabilities in external facing systems. Most times the attackers have had deep system access for a long time before the actual encryption of data
-
 In the event of a ransomware-attack fast response is critical since this could stop ongoing encryption and lateral movement. Most times a hard organization-wide shutdown can't be avoided but the recovery time can highly depend upon the maturity of the incident response program of the organization. 
-
 Ransomware events are most likely only the end of an ongoing infiltration of a network. In many cases the attackers will already mapped your network and gathered credentials long before. Even the extortion of data over a long time span is not uncommon nowadays.
-
 Ransomware in particular is still mostly focused on Windows based systems and domains. The recommendations in this playbook aim to be universal but may sometimes be specific to Windows systems.
 
 ## Safeguards
 
-* Patch Management
-* Endpoint Protection
-* Network segmentation
-* Backup Strategy (remove from domain)
-* Restrict Admin Accounts
-* Firewall / VLAN also for VMs  / IDS
-* hardening
-* remove old systems / smbv1
-* proxy
-* vpn
-* mail spam / mail attachement filter
-* disable makros and makro documents
-* software whitelists
-* Disable Windows Script Host
+These Safeguards are designed to limit the spread and/or impact of a potential ransomware infection. Since ransomware infections often come with wide-spread network compromise the safeguards are also focused on this part. 
+
+* **Mature Patch Management:**
+When preparing for cyber attacks in general it is highly advised to implement available patches in a safe and fast manner. This way known vulnerabilities can be tackled and the exploitation of these can be stopped. 
+It is important to keep in mind that not only all available components including network components (routers, switches, etc), servers, endpoints and appliances including security appliances need to be in focus. Also patches need to be tested for the internal use and then applied to the systems in focus within a reasonable time frame depending on the criticality of the issues being fixed. 
+Components that are not longer supported by the vendor or an active community should not be used or only used with great care and additional and appropriate safeguards. 
+
+* **Endpoint Protection:**
+* **Network segmentation:**
+* **Backup Strategy (remove from domain):**
+* **Restrict Admin Accounts:**
+* **Firewall / VLAN also for VMs  / IDS:**
+* **hardening:**
+* **remove old systems / smbv1:**
+* **proxy:**
+* **vpn:**
+* **mail spam / mail attachement filter:**
+* **disable makros and makro documents:**
+* **software whitelists:**
+* **Disable Windows Script Host:**
 
 ## Preparation
 
@@ -55,7 +57,7 @@ Ransomware in particular is still mostly focused on Windows based systems and do
 
 ## Detection / Discovery
 
-Detection of Ransomware is normally quite easy since it is a "loud" attack event in its nature. Ransomware events that were successful can most times be identified by:
+Detecting Ransomware is normally quite easy since it is a "loud" attack event in its nature. Ransomware events that were successful can most times be identified by:
 * **Ransomware notes:**
 Ransomware notes often come in the form of human-readable text files that include information about what happened (encryption) and how to retrieve the original files (payment). Sometimes also screen backgrounds are changed or new programs are deployed that open up automatically and inform about the ransom.
 * **Encrypted Files:**
