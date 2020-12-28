@@ -61,7 +61,10 @@ Disable makros
 
 * **Web-Proxy:**
 
+
 * **VPN:**
+MFA
+Monitor and log logins
 
 
 ## Preparation
