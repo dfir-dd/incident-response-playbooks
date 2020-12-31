@@ -6,7 +6,7 @@
 |-|-|
 | **ID**            | IR-EN-001     |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
-| **Last Modified** | 2020-12-20    |
+| **Last Modified** | 2020-12-31    |
 | **Status**        | Draft         |
 | **Created**       | 2020-12-20    |
 
@@ -46,26 +46,25 @@ These Safeguards are designed to limit the spread and/or impact of a potential r
    * Backups should be done on a regular basis according to the criticality of the data to the business. For some data it may be required to only loose some minutes or hours in the event of data loss and for other information days or weeks may be fine. 
    * Replaying backups should be testes from time to time to ensure that the process is working and that data can be restored within a reasonable time frame. 
  
-* **Restrict Admin Accounts:**
-   
+* **Restrict Administrative Accounts:**
+   Before actually deploying ransomware attackers often try to scope and move through the infected network to increase the potential damage that could be done. For this domain-wide administrative accounts are a lucrative target. Make sure that all administrators have a low privileged user account for theire daily tasks and only switch to theire administrative account when absolutely necessary. Administrative accounts should also follow the least-privilege principle and domain administrators should be used even more limited. Another point to remember is to use dedicated accounts for services and not use administrative accounts when possible. 
 
 * **Security Appliances - Firewalls / IDS / Mail Security:**
-mail spam / mail attachement filter
-
+The market offers a huge amount of security appliances for each and every need out theire. To protect from ransomware the following are the most crucial:
+   * Firewall / IDS: 
+   * E-Mail Security: 
+   * Managed Endpoint Protection:
+   * Web-Proxy: 
 
 * **Endpoint Hardeing:**
 Smbv1
 Old systems
-Windows script host
+Disable Windows script host
 Disable makros
 
-* **Web-Proxy:**
-
-
 * **VPN:**
-MFA
-Monitor and log logins
-
+   VPN when not properly secured offer an easy way for an attacker to infiltrate a network. Make sure to protect your VPN with current encryption methods, client-certificates and multi-factor authentication. Make as many services available through the VPN but not the internet to reduce your external perimiter. For Site2Site VPNs with third parties make sure that they only reach the needed targets and always configure with least privileges principle in mind. 
+   Also make sure to properly monitor and log authentication requests to find anomalies. 
 
 ## Preparation
 
