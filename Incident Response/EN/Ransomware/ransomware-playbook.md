@@ -51,16 +51,17 @@ These Safeguards are designed to limit the spread and/or impact of a potential r
 
 * **Security Appliances - Firewalls / IDS / Mail Security:**
 The market offers a huge amount of security appliances for each and every need out theire. To protect from ransomware the following are the most crucial:
-   * Firewall / IDS: 
-   * E-Mail Security: 
-   * Managed Endpoint Protection:
-   * Web-Proxy: 
+   * Firewall / IDS: Firewalls and IDS have the possibility to block communication to C&C servers and potential downloads of Malware. 
+   * E-Mail Security: Mails including malicious attachments or links are a common tool for attackers. Make sure to have a proper configured spam filter in place and block incoming mails with executable attachments including office documents and content of archive files. Links within mails should be checked as well. 
+   * Managed Endpoint Protection: The endpoint protection solution should be central managed to have a unified view on alerts and the possibility to rollout measures to all devices simultaneously. 
+   * Web-Proxy: Implementing a web-proxy for all connections terminating outside of the organizational network can help to monitor and restrict outgoing traffic. Furthermore Malware which is not proxy-aware could be hindered. For servers internet connectivity should be monitored and restricted even more and a custom proxy could be used. 
 
 * **Endpoint Hardeing:**
-Smbv1
-Old systems
-Disable Windows script host
-Disable makros
+   Malware infections often start from one host and later spread through the network. Therefore the protection of all endpoints is crucial. Make sure to limit access and available services to reduce the attack surface. 
+   * Use endpoint hardening checklists offered by the CIS or other organizations to reduce the attack surface
+   * Remove old and unpatched systems from the network
+   * Disable SMBv1, Disable SNMP version 1 and 2, disable Windows script host, disable office makros or restrict them further if disabling is not an option
+   * Restrict internet access where possible. Servers should not have internet access in general. If they need to reach certain services only enable these by means of static IPS or other similar means. Clients in general require internet access but mostly only for a few services (Mail, HTTP). Other services can often be restricted. (Like FTP, SSH, RPC... )
 
 * **VPN:**
    VPN when not properly secured offer an easy way for an attacker to infiltrate a network. Make sure to protect your VPN with current encryption methods, client-certificates and multi-factor authentication. Make as many services available through the VPN but not the internet to reduce your external perimiter. For Site2Site VPNs with third parties make sure that they only reach the needed targets and always configure with least privileges principle in mind. 
