@@ -69,17 +69,34 @@ The market offers a huge amount of security appliances for each and every need o
 
 ## Preparation
 
-* Orchestration tools (rollout for updates, software etc)
-* Network segmentation
-* netwokr quarantine measures
-* Traffic Logging
-* Cyber insurance
-* Ransom payment
-* decisions
-* Save Logs from destruction
-* Central Logging
-* end user /  support awareness
-* technology to scan network and hosts for iocs
+* **Network orchestration tools:**
+   When dealing with ransomware attacks it is helpfull to have a hardware and software inventory as well as the possibility to rollout patches, make configuration changes and populate software to systems in the network. For example to schedule certains scans or patch for known vulnerabilities.
+
+* **IoC scans for network traffic and hosts:**
+   During the analysis of ransowmare certain indicators of compromise will be found. It is crucial to be able to scan the network traffic (IDS,Firewall) as well as the hosts (THOR, YARA) for these indicators in a central manner.
+
+* **Network segmentation and quarantine:**
+   A strict network segmentation enables the possibility to isolate and quarantine certain systems and segments that seem to be infected without having tu pull the big plug. 
+
+* **Central Log management:**
+   For analysis of incidents log data is key. Since attackers do know this as well they often seek to destroy or manipulate log data. A central, secured log service can help for later investigation of the incident, impact and attack methods used. Best utilized is a central log service when all log data is synchronized with a central time server and uses a common log format. Central log server should be properly secured to keep attackers at bay and store the data for some time in the past to enable thorough investigations (30 - 90 days considering priority). . 
+
+* **Ransom payment policy:**
+   As an organization you should have a policy if at all and under which circumstances you are willing to negotiate a possibly ransom payment. As always I do condem paying the ransom in any case but I do also understand that this is not always an option. 
+
+* **Upfront decisions:**
+   There are certain decision that should be made upfront including but not limited to:
+   * When to pull the plug
+   * Critical business path and invlolved systems
+   * Who can make which decisions
+   * 3rd party support at hand for forensic analysis, IT support (rebuilding systems and networks), public communication,  legar advice... 
+   * If and when to pay a ransom
+
+* **User and service desk awareness:**
+   Ransomware impact often get to know first by the end users of systems and services therefore it is important that these user and the service desk (first level support) where the users will raise theire problems are properly trained to detect the signs of system compromise and ransomware infections and that they know where and how to escalate these issues to enable fast first response. 
+
+* **Insurance:**
+   Since cyber incidents as any other incidents can cause serious damage and inflict unknown costs it is possible to insure the residual risk for cyber incidents. It is not always the best option but it should at least be known.
 
 ## Detection / Discovery
 
