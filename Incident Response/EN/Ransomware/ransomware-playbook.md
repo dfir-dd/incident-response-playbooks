@@ -149,7 +149,7 @@ When containing the infection it can sometime be more effecitve to focus on the 
    Make sure to check whether back-ups were affected by destruction, manipulation or encryption. Take propper care to secure them and make sure that they will stay unaffected. In the simplest case by taking the back-up off-network.
 
 * **Communication internal and external:**
-   Prepare your communication for employees and external sources because you will likely be running an limited network for the next couple of days or even weeks.
+   Prepare your communication for employees and external sources because you will likely be running an limited network for the next couple of days or even weeks. External communication is also crucial when PII is suspectable to be disclosed.
 
 * **Documentation:**
    Keep in mind to document all actions that were done. 
@@ -208,15 +208,22 @@ Recovery can be started after the remediation efforts are done or beforehand in 
 * **Rebuild or cleanse infected systems in a new network zone:**
    Infected systems should be rebuild from scratch with hardened blueprints in a new network zone without or with very limited connectivity to the infected network. When an analysis of the incident was conducted it sometimes can be possible to cleanse infected systems with know IOCs and not rebuilding them from scratch. But in most cases this will pose a great residual risk.
 
-* Recover data from known good backups
-* Pay the ransom if no other way can be found using xxx vendor
-* address colleteral damage
-* document actions
+* **Recover data from known good backups:**
+   After the systems have been rebuilt, the data from the last known good backup can be restored if available. 
+
+* **Pay the ransom (if no other way can be found):**
+   Decide whether to pay the ransom or not. There are known trusted services to support with this endeavour if neccessary.
+
+* **Address colleteral damage:**
+   Ransomware and measures to control the incident can result in colleteral damage to systems, production and personell. Make sure to properly address these parts as well and make use of the created documentation to indentify them.
 
 ## Post Morten
+Review your created documentation and conduct lessons learned sessions to improve the overall process of incident handling as well as overall IT security.
 
-* Review the Response Process in a whole and enhance 
-* Discuss security enhancements
-* External review of the network (Audit, Pentest etc...)
+* **Review the incident response process:**
+   Enhance the response process for later incidents by collecting what went good and what not. Identify steps that needed more preparation and use the advice that was given by any involved parties throughout the response. 
+
+* **Discuss security enhancements:**
+* **Conduct external reviews:**
 
 //TODO: Write full text from bulletin
