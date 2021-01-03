@@ -127,16 +127,32 @@ When searching for hints to ransomware infection one normally does not have to r
 Starting with the discovery phase it is crucial to create and continue a documentation of the planned and carried out actions as well as additional informations and sightings belonging to the case. This way it is easily possible to on-board new members to the case, hand over to third parties and will be from great value for potential later involvement of authorities. Furthermore this way improvement to the incident response processes and infrastructure can be easily derived later on. 
 
 ## Containment / Mitigation
+Containment of an ransomware threat should better be done too broad then to little. Include at least all systems that show symptoms and incporperate all possible information you can get from the analysis steps.
+When containing the infection it can sometime be more effecitve to focus on the systems that are not infected or show no signs of infection and make sure that they can't get infected later on.
 
-* Encapsulation of infected subnets
-  * quarantine systems / users / shares / databases / backups / archives 
-* Pause of infected or potential infected VMs
-* Shutdown of infected or potential infected Systems (Non-VM)
-* Restrict or disable internet connection for infected segments
-* restrict or disable internal routing for infected segments
-* Check Back-Up availability
-* Communication internal and external
-* documentation
+* **Secure uninfected systems:**
+   For wide reaching infections it is often more usable to first ignore the obiously infected systems and make sure to secure the non-infected systems. This can be done by starting controlled shutdowns or poperly seperate the systems. 
+
+* **Encapsulation of infected subnets/systems:**
+   When your network is strcutured in multiple subnets it may be possible to stop the ongoing infection with disconnecting all subnets that show signs of infections. All other systems still have to be monitored very closely to watch out for other corrputed systems. 
+
+* **Pausing of infected or potential infected VMs:**
+   Pause (not shutown) Virtual Machines that show signs of an active infection. This way they may be analyzed later without potential data loss.
+
+* **Shutdown of infected or potential infected Systems (Non-VM):**
+   Shutdown all systems that show signs if infection and are not virtualized. When this is no option at least disconnect the network.
+
+* **Restrict or disable internet connection for infected segments:**
+   For infected systems or network segments the internet connection should be disabled and also internal connections should be strongly restricted to ensure no further spreading is possible and all C&C connectivity is blocked.
+
+* **Check Back-Up availability:**
+   Make sure to check whether back-ups were affected by destruction, manipulation or encryption. Take propper care to secure them and make sure that they will stay unaffected. In the simplest case by taking the back-up off-network.
+
+* **Communication internal and external:**
+   Prepare your communication for employees and external sources because you will likely be running an limited network for the next couple of days or even weeks.
+
+* **Documentation:**
+   Keep in mind to document all actions that were done. 
 
 ## Analysis
 
@@ -187,8 +203,11 @@ Starting with the discovery phase it is crucial to create and continue a documen
 * document actions
 
 ## Recovery
+Recovery can be started after the remediation efforts are done or beforehand in a completly new network zone that has initialy no ties the infected network. When needed the infected systems can be continued to be used with great care and connectivity to other systems should be limited to known good services and protocols. (For exmaple with firewall rules)
 
-* Rebuild or cleanse (note in most cases high residual risk) infected systems 
+* **Rebuild or cleanse infected systems in a new network zone:**
+   Infected systems should be rebuild from scratch with hardened blueprints in a new network zone without or with very limited connectivity to the infected network. When an analysis of the incident was conducted it sometimes can be possible to cleanse infected systems with know IOCs and not rebuilding them from scratch. But in most cases this will pose a great residual risk.
+
 * Recover data from known good backups
 * Pay the ransom if no other way can be found using xxx vendor
 * address colleteral damage
