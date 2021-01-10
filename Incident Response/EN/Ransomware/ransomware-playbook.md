@@ -190,7 +190,9 @@ When containing the infection it can sometime be more effecitve to focus on the 
   * what is the loss when the backups are corrput
   * was sensitive data breached (PII)
   * was data stolen
-* document actions
+  
+* **Documentation:**
+   Keep in mind to document all actions that were done. 
 
 ## Remediation
 
@@ -201,16 +203,16 @@ When containing the infection it can sometime be more effecitve to focus on the 
    Make sure to patch all your systems including networking devices. Start with former infected systems and those which are on the network perimeter. Then go for security appliances and servers, priotizing by with business criticality. Afterwards care for clients and everything else.
 
 * **IoC search the whole infrastructure:**
-   
+   Use the identified IoC's and scan your whole infrastrcuture to identify infected or otherwise compromised systems.
 
-* **Properly clean or rebuild infected system:**
-   
+* **Remove backdoors and other malware from the systems:**
+   Use the knowledge about the identified attack methods to clean all systems from backdoors/trojans that might autostart and other executable programms that might get executed by untrained personell.
 
 * **Adjust Firewall / IDS / AV:**
-   
+   Adjust your security appliances like firewalls, IDS/IPS and endpoint protection systems to identify the known indicators from the attack and be prepared for new outbreaks of malware beacons that were missed beforehand.
 
-* **Document actions:**
-   
+* **Documentation:**
+   Keep in mind to document all actions that were done. 
 
 ## Recovery
 Recovery can be started after the remediation efforts are done or beforehand in a completly new network zone that has initialy no ties the infected network. When needed the infected systems can be continued to be used with great care and connectivity to other systems should be limited to known good services and protocols. (For exmaple with firewall rules)
@@ -226,6 +228,9 @@ Recovery can be started after the remediation efforts are done or beforehand in 
 
 * **Address colleteral damage:**
    Ransomware and measures to control the incident can result in colleteral damage to systems, production and personell. Make sure to properly address these parts as well and make use of the created documentation to indentify them.
+   
+* **Documentation:**
+   As always keep in mind to document all actions that were done. 
 
 ## Post Morten
 Review your created documentation and conduct lessons learned sessions to improve the overall process of incident handling as well as overall IT security.
