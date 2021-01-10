@@ -6,7 +6,7 @@
 |-|-|
 | **ID**            | IR-EN-001     |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
-| **Last Modified** | 2020-12-31    |
+| **Last Modified** | 2021-01-10    |
 | **Status**        | Draft         |
 | **Created**       | 2020-12-20    |
 
@@ -194,13 +194,23 @@ When containing the infection it can sometime be more effecitve to focus on the 
 
 ## Remediation
 
-* Close attack vector
-* Patch Systems 
-* inspect all assetf for iocs
-* remove all binaries and leftovers (spam mails etc) from the systems
-* Adjust Firewall / IDS / AV
-* update endpoint protection
-* document actions
+* **Close the attack vector:**
+   It is crucial to identify the attack vector and lateral movement techniques used and properly close them. Otherwise the same vulnerabilities could be exploited again by the same or other attackers in very short time. When the attack vector could not be identified properly you have to make sure to properly increase overall it-security to enhance monitoring and implement safeguards for all identified techniques the attackers have used or abused.
+
+* **Patching:**
+   Make sure to patch all your systems including networking devices. Start with former infected systems and those which are on the network perimeter. Then go for security appliances and servers, priotizing by with business criticality. Afterwards care for clients and everything else.
+
+* **IoC search the whole infrastructure:**
+   
+
+* **Properly clean or rebuild infected system:**
+   
+
+* **Adjust Firewall / IDS / AV:**
+   
+
+* **Document actions:**
+   
 
 ## Recovery
 Recovery can be started after the remediation efforts are done or beforehand in a completly new network zone that has initialy no ties the infected network. When needed the infected systems can be continued to be used with great care and connectivity to other systems should be limited to known good services and protocols. (For exmaple with firewall rules)
@@ -224,6 +234,10 @@ Review your created documentation and conduct lessons learned sessions to improv
    Enhance the response process for later incidents by collecting what went good and what not. Identify steps that needed more preparation and use the advice that was given by any involved parties throughout the response. 
 
 * **Discuss security enhancements:**
+During the investigation of an incident many measures and potentials for enhancement will come to light. Keep track of them through the incident handling process and discuss them afterwards with deciders and colleagues to see which will fit your organization best and provide the most use for your overall IT-Security.
+
 * **Conduct external reviews:**
+To help further harden you infrastructure think about external review opportunities like penetration tests or securtiy audits.
+
 
 //TODO: Write full text from bulletin
