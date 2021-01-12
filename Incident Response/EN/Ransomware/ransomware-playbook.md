@@ -148,6 +148,9 @@ When containing the infection it can sometime be more effecitve to focus on the 
 * **Check Back-Up availability:**
    Make sure to check whether back-ups were affected by destruction, manipulation or encryption. Take propper care to secure them and make sure that they will stay unaffected. In the simplest case by taking the back-up off-network.
 
+* **Secure needed data:**
+   Make sure to first care about data that may be overriten due to log rotation or other means. Export this data to have it available for the analysis. For example logs of firewalls and IDS systems as well as server and clients that cant be paused or shut down are prone to loose data due to overwriting mechanism. 
+
 * **Communication internal and external:**
    Prepare your communication for employees and external sources because you will likely be running an limited network for the next couple of days or even weeks. External communication is also crucial when PII is suspectable to be disclosed.
 
@@ -155,6 +158,8 @@ When containing the infection it can sometime be more effecitve to focus on the 
    Keep in mind to document all actions that were done. 
 
 ## Analysis
+Analysis of such incidents should be conducted by properly trained personell. This documentation can only help to provide the most basics steps and five you some kind of guideline.
+For anylsis steps always make sure to not tamper with the information. Make backups copies of the original data and work with them. Only mount file systems as read-only to not change any data. Take extra care with live malware and commands/scripts to not infected clean systems.
 
 * **Determine the Ransomware/Malware type :**
    Ransomware is often reused by theire actors in multiple attacks against different targets. Thus allowing to define certain characteristics that are often similar or even the same between different attacks using the same ransomware-software. These information can help through the whole response process. It is therefore crucial to identify the ransomware family. Besides information about the attack some ransomware families are know to have used weak encryption methods or faulty implementation thus allowing for decryption of the encrypted data.
@@ -163,14 +168,9 @@ When containing the infection it can sometime be more effecitve to focus on the 
    Use normal search engines to identify the ransomware familiy with the above information or use specialized webservices like NoMoreRansom (https://www.nomoreransom.org/crypto-sheriff.php) or ID-Ransomware (https://id-ransomware.malwarehunterteam.com/) that will take a encrypted file and/or the ransomware note to automatically determine the ransomware type. In many cases this is sufficent. If not you may seek help from professional security providers or ask in the BleepingComputer forum (https://www.bleepingcomputer.com/forums/f/239/ransomware-help-tech-support/).
    When you have identified the ransomware familiy search for already conducted analysis reports and gather the following information:
    * Decrpytion possibilities: Is it possible to decrypt the encrypted files without paying the ransom? What experiences have others made after paying the ransom? Are all files targeted? Is the whole file encrypted or only some information (may help with large files like databases which could be recovered if only the metadata was destroyed) ?
-   * What are common attack, persistence and lateral movement vectors used by the actors? Other indicators like network traffic to specific domains etc. . These information can be used to scan and locate and remediate the infection. Where are the executable dropped by the ransomware, are they still there? If so make sure to leave them in place for later analysis.
+   * Indicators of compromise: What are common attack, persistence and lateral movement vectors used by the actors? Other indicators like network traffic to specific domains etc. . These information can be used to scan and locate and remediate the infection. Where are the executable dropped by the ransomware, are they still there? If so make sure to leave them in place for later analysis.
 
   
-  gather information about:
-  * decryption possibilities
-  * decrpytion experience
-  * file corruption vs file encryption
-  * known iocs
 * Determine attack vector and lateral movement techniques
   * mail / attachements
   * vulnerabilities in external facing systems
