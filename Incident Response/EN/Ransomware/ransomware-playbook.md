@@ -156,14 +156,16 @@ When containing the infection it can sometime be more effecitve to focus on the 
 
 ## Analysis
 
-* gather iocs from the attack
-* locate executable code belonging to the attack
-* Determine Ransom Type (link to id ransom etc)
-  * information files of the ransomware (sometimes open itself)(html, txt ...)
-  * wallpaper changes
-  * e-mail in file ending
-  * file ending
-  -->  https://www.nomoreransom.org/crypto-sheriff.php , https://id-ransomware.malwarehunterteam.com/
+* **Determine the Ransomware/Malware type :**
+   Ransomware is often reused by theire actors in multiple attacks against different targets. Thus allowing to define certain characteristics that are often similar or even the same between different attacks using the same ransomware-software. These information can help through the whole response process. It is therefore crucial to identify the ransomware family. Besides information about the attack some ransomware families are know to have used weak encryption methods or faulty implementation thus allowing for decryption of the encrypted data.
+   There are severaly ways to determine the ransomware type. In most events it is sufficent to read through the notes that are dropped by the attacker providing additional information about the attack on how to retrieve the data/make the payment. These notes are either placed in every folder/ the desktop/ opened by itself or visibale as a changed background picture.
+   Another indicator may be the file ending of the encrypted files or the encrypted file itself (metadata etc...)
+   Use normal search engines to identify the ransomware familiy with the above information or use specialized webservices like NoMoreRansom (https://www.nomoreransom.org/crypto-sheriff.php) or ID-Ransomware (https://id-ransomware.malwarehunterteam.com/) that will take a encrypted file and/or the ransomware note to automatically determine the ransomware type. In many cases this is sufficent. If not you may seek help from professional security providers or ask in the BleepingComputer forum (https://www.bleepingcomputer.com/forums/f/239/ransomware-help-tech-support/).
+   When you have identified the ransomware familiy search for already conducted analysis reports and gather the following information:
+   * Decrpytion possibilities: Is it possible to decrypt the encrypted files without paying the ransom? What experiences have others made after paying the ransom? Are all files targeted? Is the whole file encrypted or only some information (may help with large files like databases which could be recovered if only the metadata was destroyed) ?
+   * What are common attack, persistence and lateral movement vectors used by the actors? Other indicators like network traffic to specific domains etc. . These information can be used to scan and locate and remediate the infection. Where are the executable dropped by the ransomware, are they still there? If so make sure to leave them in place for later analysis.
+
+  
   gather information about:
   * decryption possibilities
   * decrpytion experience
