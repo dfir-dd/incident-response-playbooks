@@ -6,7 +6,7 @@
 |-|-|
 | **ID**            | IR-EN-001     |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
-| **Last Modified** | 2021-01-10    |
+| **Last Modified** | 2021-01-13    |
 | **Status**        | Draft         |
 | **Created**       | 2020-12-20    |
 
@@ -170,23 +170,23 @@ For anylsis steps always make sure to not tamper with the information. Make back
    * Decrpytion possibilities: Is it possible to decrypt the encrypted files without paying the ransom? What experiences have others made after paying the ransom? Are all files targeted? Is the whole file encrypted or only some information (may help with large files like databases which could be recovered if only the metadata was destroyed) ?
    * Indicators of compromise: What are common attack, persistence and lateral movement vectors used by the actors? Other indicators like network traffic to specific domains etc. . These information can be used to scan and locate and remediate the infection. Where are the executable dropped by the ransomware, are they still there? If so make sure to leave them in place for later analysis.
 
-  
-* Determine attack vector and lateral movement techniques
-  * mail / attachements
-  * vulnerabilities in external facing systems
-    * vpn
-    * firewall
-    * mail
-    * application server
-    * pbx
-  * removable media
-  * loss of devices
-* Check for backdoors
-* Check for exposure/disclosure of PII and other Data
+* **Determine the attack vector:**
+  Try to track down the root of the initial infection through a timelining of infected systems or by statements from employees. Where this is not feasible try to track down the most potential targets and work from theire. Common root causes can be:
+  * Phishing Mails: Mails with malicious links or files attached are one of the most common infection paths. These link often lead to faked pages that try to trick user into downloading files or entering credentials that will then later be exploited. E.g. VPN Logins. With this you have to rely heavily on user feedback. Make sure to create a culture that supports employees to admin errors otherwise they will not call out to you in respect of the feared consequences.
+  * Attached removable media: Untrained users may attach non trusted media or devices to theire company systems. This way unknown and untrusted software could be placed or executed on these systems.
+  * Vulnerable systems: Unpactched, unmanaged or obsolete system pose a great threat and are often targeted by attackers. In focus lay system that are externaly facing but this is not limited to them. Every vulnerable system can help the attackers to strengethen theire foothold in the infrastructure. System that often are available to attackers and are prone to being exploited are for example VPN gateways, Firewalls, Mail server, Web- and application server, PBX systems, FTP server.
+  * Unusual events in general: Make sure to also review all unusual events that occured in the last several weeks or even months and check for possible connections. For example loss of hardware, burglaries, technology partners that were attacked or even employees that were terminated in bad standing can have a context to a malware outbreak way after.
+   
+* **Gather information about the malware that was deployed and theire damage potential:**
+
 * determine the scope of the attack
   * what systems were affected
   * scan for iocs in the network
   * what data is affected
+  Check for exposure/disclosure of PII and other Data
+  
+* Check for backdoors
+  
 * determine the impact of the attack
   * what loss is expected
   * what is the loss when the backups are corrput
@@ -194,7 +194,7 @@ For anylsis steps always make sure to not tamper with the information. Make back
   * was data stolen
   
 * **Documentation:**
-   Keep in mind to document all actions that were done. 
+   Keep in mind to document all actions that you conducted as well as the results. 
 
 ## Remediation
 
