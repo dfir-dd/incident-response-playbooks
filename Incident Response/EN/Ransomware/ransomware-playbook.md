@@ -79,7 +79,10 @@ The market offers a huge amount of security appliances for each and every need o
    A strict network segmentation enables the possibility to isolate and quarantine certain systems and segments that seem to be infected without having tu pull the big plug. 
 
 * **Central Log management:**
-   For analysis of incidents log data is key. Since attackers do know this as well they often seek to destroy or manipulate log data. A central, secured log service can help for later investigation of the incident, impact and attack methods used. Best utilized is a central log service when all log data is synchronized with a central time server and uses a common log format. Central log server should be properly secured to keep attackers at bay and store the data for some time in the past to enable thorough investigations (30 - 90 days considering priority). . 
+   For analysis of incidents log data is key. Since attackers do know this as well they often seek to destroy or manipulate log data. A central, secured log service can help for later investigation of the incident, impact and attack methods used. Best utilized is a central log service when all log data is synchronized with a central time server and uses a common log format. Central log server should be properly secured to keep attackers at bay and store the data for some time in the past to enable thorough investigations (30 - 90 days considering priority). 
+   
+* **Enhance your logging:**
+   There are different ways to futher increase logging to identify acces to critical data. For example with the Windows last Access timestamp that can be enabled for certain folders and file shares. Comparable means are available for other systems as well. Also make sure to properly size your log files to stop them from fast log rotating. Windows and Linux system log sizes can be adjusted. (This is crucial for important server systems like file shares, management systems, domain controller etc. and the central system and security log files)
 
 * **Ransom payment policy:**
    As an organization you should have a policy if at all and under which circumstances you are willing to negotiate a possibly ransom payment. As always I do condem paying the ransom in any case but I do also understand that this is not always an option. 
@@ -99,7 +102,6 @@ The market offers a huge amount of security appliances for each and every need o
    Since cyber incidents as any other incidents can cause serious damage and inflict unknown costs it is possible to insure the residual risk for cyber incidents. It is not always the best option but it should at least be known.
 
 ## Detection / Discovery
-
 Detecting Ransomware is normally quite easy since it is a "loud" attack event in its nature. Ransomware events that were successful can most times be identified by:
 
 * **Ransomware notes:**
@@ -171,27 +173,28 @@ For anylsis steps always make sure to not tamper with the information. Make back
    * Indicators of compromise: What are common attack, persistence and lateral movement vectors used by the actors? Other indicators like network traffic to specific domains etc. . These information can be used to scan and locate and remediate the infection. Where are the executable dropped by the ransomware, are they still there? If so make sure to leave them in place for later analysis.
 
 * **Determine the attack vector:**
-  Try to track down the root of the initial infection through a timelining of infected systems or by statements from employees. Where this is not feasible try to track down the most potential targets and work from theire. Common root causes can be:
+  Try to track down the root of the initial infection through timelining of infected systems or by statements from employees. Where this is not feasible try to track down the most potential targets and work from theire. Common root causes can be:
   * Phishing Mails: Mails with malicious links or files attached are one of the most common infection paths. These link often lead to faked pages that try to trick user into downloading files or entering credentials that will then later be exploited. E.g. VPN Logins. With this you have to rely heavily on user feedback. Make sure to create a culture that supports employees to admin errors otherwise they will not call out to you in respect of the feared consequences.
   * Attached removable media: Untrained users may attach non trusted media or devices to theire company systems. This way unknown and untrusted software could be placed or executed on these systems.
   * Vulnerable systems: Unpactched, unmanaged or obsolete system pose a great threat and are often targeted by attackers. In focus lay system that are externaly facing but this is not limited to them. Every vulnerable system can help the attackers to strengethen theire foothold in the infrastructure. System that often are available to attackers and are prone to being exploited are for example VPN gateways, Firewalls, Mail server, Web- and application server, PBX systems, FTP server.
   * Unusual events in general: Make sure to also review all unusual events that occured in the last several weeks or even months and check for possible connections. For example loss of hardware, burglaries, technology partners that were attacked or even employees that were terminated in bad standing can have a context to a malware outbreak way after.
+  The target is to identify the system where the attacker started to iterate the network and gather more information since this will most likely be a system infected very early and close to the attack vector itself if it is not the system posing the attack vector.
    
 * **Gather information about the malware that was deployed and theire damage potential:**
+   Try to get a sample from the active malware that was executed on the environment. Normaly ransomware comes with various droppers, exploit kits, scanners and so on resulting in multiple binaries that we need to search for. Use the collected IoC from the ransomware family and search for executables in known locations. Other possibilities include reviewing last run software (prefetch, amcache/shimcache), system event logs, MFT timelines, auto start mechanisms (registry auto start keys, autostart folder, tasks, services, cron jobs, bashrc etc..) and malware search tools like THOR, Rootkit Removal Tools, multiple anti virus suites to identify unknown malware binaries.
+   Identified malware can be analyzed through sandboxes or static analysis measure up to reverse engineering to find out what functionalities the malware had and what other damage may be done which is currently unknown.
+   Through this means it may be possible to identify system which may not be corrputed or at least not by automatic measures.
 
-* determine the scope of the attack
-  * what systems were affected
-  * scan for iocs in the network
-  * what data is affected
-  Check for exposure/disclosure of PII and other Data
+* **Determine the scope of the attack:**
+  To properly plan the extend of later recovery and eradiction measures it is crucial to identify the scope of the attack. What system were infected for sure, what system may be infected and which system may be untouched. This has to be properly checked of course.
+  Use automatic tools to scan the network for all identified IoCs. This can include checking for network traffic in central network components (firewalls, proxies, core switches). Other means are YARA or THOR rules or additional policies for the endpoint protection with the help of the vendor.
+  Another important point is to identify affected data. This should focus on data that is damaged in form of encryption but also data that may be copied without permission from the systems. When there is no DRM or Data Loss prevention in place this can be a very hard task to identify. Try to scope out the amount of outgoing traffic to known domains of the attackers and from which system it was send. Starting with this search for manual executed commands or database queries. If you cant further pivot the data that may be corrputed on a system you must assume the worst case. Identify stolen data is crucial since the attacker will try to threaten you with realising stolen data. This is almost always a very hard task to do and depends heavily on system to identify such actions in the first place.
+  Also make sure to check for exposure/disclosure of PII since then you not only have to properly inform all affected persons and the data protection officers but also have to make sure what other measures were in place to secure PII and if they may be breached as well. (Encrytion in rest etc.)
+  Check whether backups were affected and how far the traces of the attack go to identify which backups may be safe.
   
-* Check for backdoors
-  
-* determine the impact of the attack
-  * what loss is expected
-  * what is the loss when the backups are corrput
-  * was sensitive data breached (PII)
-  * was data stolen
+* **Check for backdoors:**
+   The attackers will most likely try to preserve a foothold in your infrastructure through so called backdoors. These have to persist on the file system and need a way of communication with the attacker. Monitor for traffic to unusual domains or IPs from systems that normaly don't have active network activity. Restrict all systems to only the network traffic that is needed for the services on the system. Also check for beacon traffic occuring in certain patterns. 
+   Another way is the use of backdoor or rootkit removal tools like Kaspersky TDSSKiller.
   
 * **Documentation:**
    Keep in mind to document all actions that you conducted as well as the results. 
@@ -246,5 +249,3 @@ During the investigation of an incident many measures and potentials for enhance
 * **Conduct external reviews:**
 To help further harden you infrastructure think about external review opportunities like penetration tests or securtiy audits.
 
-
-//TODO: Write full text from bulletin
