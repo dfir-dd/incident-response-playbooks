@@ -132,6 +132,8 @@ Starting with the discovery phase it is crucial to create and continue a documen
 Containment of an ransomware threat should better be done too broad then to little. Include at least all systems that show symptoms and incporperate all possible information you can get from the analysis steps.
 When containing the infection it can sometime be more effecitve to focus on the systems that are not infected or show no signs of infection and make sure that they can't get infected later on.
 
+Accounts sperren!
+
 * **Secure uninfected systems:**
    For wide reaching infections it is often more usable to first ignore the obiously infected systems and make sure to secure the non-infected systems. This can be done by starting controlled shutdowns or poperly seperate the systems. 
 
