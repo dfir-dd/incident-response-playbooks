@@ -6,9 +6,9 @@
 |-|-|
 | **ID**            | IR-EN-001     |
 | **Title**         | Incident Response Playbook Short - Ransomware Infection |
-| **Last Modified** | 2021-01-19    |
+| **Last Modified** | 2021-01-22    |
 | **Status**        | Draft         |
-| **Created**       | 2021-01-19   |
+| **Created**       | 2021-01-19    |
 
 ## Safeguards
 
