@@ -123,6 +123,7 @@
 ## Recovery
 
 * Rebuild or cleanse infected systems in a new network zone
+* rebuild the domain
 * Recover data from known good backups
 * Pay the ransom (if no other way can be found)
 * Address colleteral damage
