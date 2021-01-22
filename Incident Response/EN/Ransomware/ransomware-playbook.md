@@ -133,8 +133,8 @@ Containment of an ransomware threat should better be done too broad then to litt
 When containing the infection it can sometime be more effecitve to focus on the systems that are not infected or show no signs of infection and make sure that they can't get infected later on.
 
 * **Reset or lock compromised accounts:**
+   All accounts that were compromised should be locked and reseted before any further use. Make sure to also change the password for all services using the same credentials. Check for abuse of the accounts that are infected.
    
-
 * **Secure uninfected systems:**
    For wide reaching infections it is often more usable to first ignore the obiously infected systems and make sure to secure the non-infected systems. This can be done by starting controlled shutdowns or poperly seperate the systems. 
 
