@@ -6,7 +6,7 @@
 |-|-|
 | **ID**            | IR-EN-001     |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
-| **Last Modified** | 2021-01-13    |
+| **Last Modified** | 2021-01-22    |
 | **Status**        | Draft         |
 | **Created**       | 2020-12-20    |
 
@@ -56,7 +56,7 @@ The market offers a huge amount of security appliances for each and every need o
    * Managed Endpoint Protection: The endpoint protection solution should be central managed to have a unified view on alerts and the possibility to rollout measures to all devices simultaneously. 
    * Web-Proxy: Implementing a web-proxy for all connections terminating outside of the organizational network can help to monitor and restrict outgoing traffic. Furthermore Malware which is not proxy-aware could be hindered. For servers internet connectivity should be monitored and restricted even more and a custom proxy could be used. 
 
-* **Endpoint Hardeing:**
+* **Endpoint Hardening:**
    Malware infections often start from one host and later spread through the network. Therefore the protection of all endpoints is crucial. Make sure to limit access and available services to reduce the attack surface. 
    * Use endpoint hardening checklists offered by the CIS or other organizations to reduce the attack surface
    * Remove old and unpatched systems from the network
@@ -70,10 +70,10 @@ The market offers a huge amount of security appliances for each and every need o
 ## Preparation
 
 * **Network orchestration tools:**
-   When dealing with ransomware attacks it is helpfull to have a hardware and software inventory as well as the possibility to rollout patches, make configuration changes and populate software to systems in the network. For example to schedule certains scans or patch for known vulnerabilities.
+   When dealing with ransomware attacks it is helpfull to have a hardware and software inventory as well as the possibility to rollout patches and software, make configuration changes and populate software to systems in the network. For example to schedule certains scans or patch for known vulnerabilities.
 
 * **IoC scans for network traffic and hosts:**
-   During the analysis of ransowmare certain indicators of compromise will be found. It is crucial to be able to scan the network traffic (IDS,Firewall) as well as the hosts (THOR, YARA) for these indicators in a central manner.
+   During the analysis of ransowmare certain indicators of compromise will be found. It is crucial to be able to scan the network traffic (netflow,IDS,Firewall) as well as the hosts (THOR, YARA) for these indicators in a central manner.
 
 * **Network segmentation and quarantine:**
    A strict network segmentation enables the possibility to isolate and quarantine certain systems and segments that seem to be infected without having tu pull the big plug. 
@@ -99,7 +99,7 @@ The market offers a huge amount of security appliances for each and every need o
    Ransomware impact often get to know first by the end users of systems and services therefore it is important that these user and the service desk (first level support) where the users will raise theire problems are properly trained to detect the signs of system compromise and ransomware infections and that they know where and how to escalate these issues to enable fast first response. 
 
 * **Insurance:**
-   Since cyber incidents as any other incidents can cause serious damage and inflict unknown costs it is possible to insure the residual risk for cyber incidents. It is not always the best option but it should at least be known.
+   Since cyber incidents as any other incidents can cause serious damage and inflict unknown costs it is possible to insure the residual risk for cyber incidents. It is not always the best option but it should at least be known that this is a possiblility.
 
 ## Detection / Discovery
 Detecting Ransomware is normally quite easy since it is a "loud" attack event in its nature. Ransomware events that were successful can most times be identified by:
@@ -110,7 +110,7 @@ Ransomware notes often come in the form of human-readable text files that includ
 * **Encrypted Files:**
 When successful ransomware attacks will encrypt many files on the infected systems, overwriting the original files. The encryption focuses on data that has value speaking of databases and documents and not log files or executables. The encrypted files can be identified by their new file ending which is most likely cryptic or because the file can't be opened and read as normal as before.
 
-* **Unusual high performance statistics:**
+* **Unusual high load:**
 When the encryption is ongoing the system may see unusual high load. For example with high CPU usage, high Disk(I/O) usage and unusual many file and folder access calls. This can be monitored through many different tools and should be investigated further. 
 
 * **Anti-virus or IDS Events:**
@@ -132,7 +132,8 @@ Starting with the discovery phase it is crucial to create and continue a documen
 Containment of an ransomware threat should better be done too broad then to little. Include at least all systems that show symptoms and incporperate all possible information you can get from the analysis steps.
 When containing the infection it can sometime be more effecitve to focus on the systems that are not infected or show no signs of infection and make sure that they can't get infected later on.
 
-Accounts sperren!
+* **Reset or lock compromised accounts:**
+   
 
 * **Secure uninfected systems:**
    For wide reaching infections it is often more usable to first ignore the obiously infected systems and make sure to secure the non-infected systems. This can be done by starting controlled shutdowns or poperly seperate the systems. 
@@ -226,6 +227,10 @@ Recovery can be started after the remediation efforts are done or beforehand in 
 
 * **Rebuild or cleanse infected systems in a new network zone:**
    Infected systems should be rebuild from scratch with hardened blueprints in a new network zone without or with very limited connectivity to the infected network. When an analysis of the incident was conducted it sometimes can be possible to cleanse infected systems with know IOCs and not rebuilding them from scratch. But in most cases this will pose a great residual risk.
+   
+* **Rebuild the domain:**
+  When domain controller and or domain administrative account were compromised it is often necessary to build a new domain (tree) since trying to clean up the old domain can be tricky. If you want to do this, check for backup accounts, reset all accounts, reset the golden ticket as described by microsoft (when windows AD) check group policies and even then you may have left something.
+  `TODO Auführlicher`
 
 * **Recover data from known good backups:**
    After the systems have been rebuilt, the data from the last known good backup can be restored if available. 
