@@ -6,7 +6,7 @@
 |-|-|
 | **ID**            | IR-EN-001     |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
-| **Last Modified** | 2021-01-22    |
+| **Last Modified** | 2021-02-17    |
 | **Status**        | Draft         |
 | **Created**       | 2020-12-20    |
 
@@ -38,6 +38,8 @@ The aim of network segmentation is to limit, control and log the network traffic
 The more granular and restrictive a network segmentation is built the better, but it also gets more troubling to manage. A good configuration management is key to achieve this. 
 Network segmentation can for example be achieved with multiple firewall-interfaces, other means of VLAN or ACLs on managed switches. When creating a network segmentation the different network segments should be thoroughly planned and involve all available systems (including Virtual Machines and Networks). 
 
+restrict workstation communication
+
 * **Backup Strategy:**
 Once any malware has successfully rendered data or systems unusable the most common approach to recovery would be replaying the systems or information from a valid backup.
 The backup should follow some criteria to ensure usability in the case of an incident:
@@ -46,8 +48,12 @@ The backup should follow some criteria to ensure usability in the case of an inc
    * Backups should be done on a regular basis according to the criticality of the data to the business. For some data it may be required to only lose some minutes or hours in the event of data loss and for other information days or weeks may be fine. 
    * Replaying backups should be tested from time to time to ensure that the process is working and that data can be restored within a reasonable time frame. 
  
-* **Restrict Administrative Accounts:**
+* **Restrict Administrative Accountsc:**
 Before actually deploying ransomware attackers often try to scope and move through the infected network to increase the potential damage that could be done. For this domain-wide administrative accounts are a lucrative target. Make sure that all administrators have a low privileged user account for their daily tasks and only switch to their administrative account when absolutely necessary. Administrative accounts should also follow the least-privilege principle and domain administrators should be used even more limited. Another point to remember is to use dedicated accounts for services and not use administrative accounts when possible. 
+
+laps
+
+multi tier admin architecture
 
 * **Security Appliances - Firewalls / IDS / Mail Security:**
 The market offers a huge amount of security appliances for each and every need out there. To protect from ransomware the following are the most crucial:
@@ -55,6 +61,8 @@ The market offers a huge amount of security appliances for each and every need o
 	* E-Mail Security: Mails including malicious attachments or links are a common tool for attackers. Make sure to have a proper configured spam filter in place and block incoming mails with executable attachments including office documents and content of archive files. Links within mails should be checked as well. 
 	* Managed Endpoint Protection: The endpoint protection solution should be central managed to have a unified view on alerts and the possibility to roll out measures to all devices simultaneously. 
 	* Web-Proxy: Implementing a web-proxy for all connections terminating outside the organizational network can help to monitor and restrict outgoing traffic. Furthermore, Malware which is not proxy-aware could be hindered. For servers internet connectivity should be monitored and restricted even more and a custom proxy could be used. 
+    
+    file attachement filter
 
 * **Endpoint Hardening:**
 Malware infections often start from one host and later spread through the network. Therefore, the protection of all endpoints is crucial. Make sure to limit access and available services to reduce the attack surface. 
@@ -62,6 +70,26 @@ Malware infections often start from one host and later spread through the networ
 	* Remove old and unpatched systems from the network
 	* Disable SMBv1, Disable SNMP version 1 and 2, disable Windows script host, disable office macros or restrict them further if disabling is not an option
 	* Restrict internet access where possible. Servers should not have internet access in general. If they need to reach certain services only enable these by means of static IPS or other similar means. Clients in general require internet access but mostly only for a few services (Mail, HTTP). Other services can often be restricted. (Like FTP, SSH, RPC...)
+    * ```
+        \\TODO disable usb, applocker, disable macros, windows defender ransom protection,controlled folder access,disable wsh
+        ```
+    
+
+* **Vulnerability Management:**
+```
+\\TODO
+```
+
+* **Restrict access to Management Interfaces:**
+```
+\\TODO
+```
+
+* **Awareness Trainings:**
+```
+\\TODO
+```
+
 
 * **VPN:**
 VPN when not properly secured offer an easy way for an attacker to infiltrate a network. Make sure to protect your VPN with current encryption methods, client-certificates and multi-factor authentication. Make as many services available through the VPN but not the internet to reduce your external perimeter. For Site2Site VPNs with third parties make sure that they only reach the needed targets and always configure with least privileges principle in mind. 
@@ -83,6 +111,19 @@ For analysis of incidents log data is key. Since attackers do know this as well 
    
 * **Enhance your logging:**
 There are different ways to further increase logging to identify access to critical data. For example with the Windows last access timestamp that can be enabled for certain folders and file shares. Comparable means are available for other systems as well. Also make sure to properly size your log files to stop them from fast log rotating. Windows and Linux system log sizes can be adjusted. (This is crucial for important server systems like file shares, management systems, domain controller etc. and the central system and security log files)
+
+* **Network and business knowledge:**
+```
+\\TODO
+You will need a in depth knowledge about your network and you core busniness functions in order to remediate in the propper priority and reasonable time frame as well as support analysis.
+OS, Policies, Security Appliances, User Profiles, Software inventory
+Core Team and Roles
+```
+
+* **Mock Incidents:**
+```
+\\TODO
+```
 
 * **Ransom payment policy:**
 As an organization you should have a policy if at all and under which circumstances you are willing to negotiate a possible ransom payment. As always I do condemn paying the ransom in any case, but I do also understand that this is not always an option.
@@ -128,6 +169,16 @@ When searching for hints to ransomware infection one normally does not have to r
 * **Documentation:**
 Starting with the discovery phase it is crucial to create and continue a documentation of the planned and carried out actions as well as additional information and sightings belonging to the case. This way it is easily possible to on-board new members to the case, hand over to third parties and will be from great value for potential later involvement of authorities. Furthermore, this way improvement to the incident response processes and infrastructure can be easily derived later on. 
 
+* **Abused Accounts:**
+```
+\\TODO
+```
+
+* **Unusual Executables or Processes (that launch on boot):**
+```
+\\TODO
+```
+
 ## Containment / Mitigation
 Containment of a ransomware threat should better be done too broad then to little. Include at least all systems that show symptoms and incorporate all possible information you can get from the analysis steps.
 When containing the infection it can sometime be more effective to focus on the systems that are not infected or show no signs of infection and make sure that they can't get infected later on.
@@ -146,6 +197,11 @@ Pause (not shutdown) Virtual Machines that show signs of an active infection. Th
 
 * **Shutdown of infected or potential infected Systems (Non-VM):**
 Shutdown all systems that show signs of infection and are not virtualized. When this is no option at least disconnect the network.
+
+* **Disconnect shared drives:**
+```
+\\TODO
+```
 
 * **Restrict or disable internet connection for infected segments:**
 For infected systems or network segments the internet connection should be disabled and also internal connections should be strongly restricted to ensure no further spreading is possible and all C&C connectivity is blocked.
@@ -195,12 +251,25 @@ Another important point is to identify affected data. This should focus on data 
 Also make sure to check for exposure/disclosure of PII since then you not only have to properly inform all affected persons and the data protection officers but also have to make sure what other measures were in place to secure PII and if they may be breached as well. (Encryption in rest etc.)
 Check whether backups were affected and how far the traces of the attack go to identify which backups may be safe.
   
+```
+\\TODO Which Services affected
+
+```
+
+* **Timeline:**
+```
+\\TODO
+```
+  
 * **Check for backdoors:**
 The attackers will most likely try to preserve a foothold in your infrastructure through so-called backdoors. These have to persist on the file system and need a way of communication with the attacker. Monitor for traffic to unusual domains or IPs from systems that normally don't have active network activity. Restrict all systems to only the network traffic that is needed for the services on the system. Also check for beacon traffic occurring in certain patterns. 
 Another way is the use of backdoor or rootkit removal tools like Kaspersky TDSSKiller.
   
 * **Documentation:**
  Keep in mind to document all actions that you conducted as well as the results. 
+```
+\\TODO
+```
 
 ## Remediation
 
@@ -241,8 +310,16 @@ Decide whether to pay the ransom or not. There are known trusted services to sup
 * **Address collateral damage:**
 Ransomware and measures to control the incident can result in collateral damage to systems, production and personal. Make sure to properly address these parts as well and make use of the created documentation to identify them.
 
+* **Ensure that network traffic is back to normal:**
+```
+\\TODO
+```
+
 * **Documentation:**
 As always keep in mind to document all actions that were done. 
+```
+\\TODO
+```
 
 ## Post Morten
 Review your created documentation and conduct lessons learned sessions to improve the overall process of incident handling as well as overall IT security.
@@ -256,3 +333,7 @@ During the investigation of an incident many measures and potentials for enhance
 * **Conduct external reviews:**
 To help further harden your infrastructure think about external review opportunities like penetration tests or security audits.
 
+* **Determine Incident cost:**
+```
+\\TODO
+```
