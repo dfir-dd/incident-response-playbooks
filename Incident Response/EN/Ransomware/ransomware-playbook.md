@@ -6,7 +6,7 @@
 |-|-|
 | **ID**            | IR-EN-001     |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
-| **Last Modified** | 2021-02-17    |
+| **Last Modified** | 2021-01-22    |
 | **Status**        | Draft         |
 | **Created**       | 2020-12-20    |
 
@@ -38,7 +38,10 @@ The aim of network segmentation is to limit, control and log the network traffic
 The more granular and restrictive a network segmentation is built the better, but it also gets more troubling to manage. A good configuration management is key to achieve this. 
 Network segmentation can for example be achieved with multiple firewall-interfaces, other means of VLAN or ACLs on managed switches. When creating a network segmentation the different network segments should be thoroughly planned and involve all available systems (including Virtual Machines and Networks). 
 
-restrict workstation communication
+
+```
+\\TODO restrict workstation communication
+```
 
 * **Backup Strategy:**
 Once any malware has successfully rendered data or systems unusable the most common approach to recovery would be replaying the systems or information from a valid backup.
@@ -51,9 +54,13 @@ The backup should follow some criteria to ensure usability in the case of an inc
 * **Restrict Administrative Accountsc:**
 Before actually deploying ransomware attackers often try to scope and move through the infected network to increase the potential damage that could be done. For this domain-wide administrative accounts are a lucrative target. Make sure that all administrators have a low privileged user account for their daily tasks and only switch to their administrative account when absolutely necessary. Administrative accounts should also follow the least-privilege principle and domain administrators should be used even more limited. Another point to remember is to use dedicated accounts for services and not use administrative accounts when possible. 
 
-laps
+```
+\\TODO laps
+```
 
-multi tier admin architecture
+```
+\\TODO multi tier admin architecture
+```
 
 * **Security Appliances - Firewalls / IDS / Mail Security:**
 The market offers a huge amount of security appliances for each and every need out there. To protect from ransomware the following are the most crucial:
@@ -62,7 +69,10 @@ The market offers a huge amount of security appliances for each and every need o
 	* Managed Endpoint Protection: The endpoint protection solution should be central managed to have a unified view on alerts and the possibility to roll out measures to all devices simultaneously. 
 	* Web-Proxy: Implementing a web-proxy for all connections terminating outside the organizational network can help to monitor and restrict outgoing traffic. Furthermore, Malware which is not proxy-aware could be hindered. For servers internet connectivity should be monitored and restricted even more and a custom proxy could be used. 
     
-    file attachement filter
+    * ```
+    \\TODO file attachement filter
+    ```
+    
 
 * **Endpoint Hardening:**
 Malware infections often start from one host and later spread through the network. Therefore, the protection of all endpoints is crucial. Make sure to limit access and available services to reduce the attack surface. 
