@@ -24,16 +24,34 @@ DDoS is a distributed DoS attack which means that a big amount of different syst
 
 These Safeguards are designed to limit the impact and/or increase reaction possibilities in the case of DoS and DDoS attacks. 
 
+* **Redundant connections:**
+TODO
+
+* **DDoS protection:**
+TODO
+
+* **Network component hardening:**
+TODO
+
+* **Load testing for applications:**
+TODO
 
 
 ## Preparation
 
 When preparing for (D)DoS attacks we mostly focus on the right partners and contact at hand and having enough log information available to fastly get to the rootcause of the DoS scenario.
 
+* **Performance monitoring:**
+TODO
 
+* **Get contacts from your ISP regarding DDoS defence:**
+TODO
 
+* **Get contacts for your internet facing systems:**
+TODO
 
-
+* **Make upfront decision:**
+TODO
 
 ## Detection / Discovery
 Detecting (D)DoS is normally quite easy since it is a "loud" attack. DoS can be identified by:
