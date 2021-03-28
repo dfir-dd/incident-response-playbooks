@@ -51,7 +51,7 @@ The backup should follow some criteria to ensure usability in the case of an inc
    * Backups should be done on a regular basis according to the criticality of the data to the business. For some data it may be required to only lose some minutes or hours in the event of data loss and for other information days or weeks may be fine. 
    * Replaying backups should be tested from time to time to ensure that the process is working and that data can be restored within a reasonable time frame. 
  
-* **Restrict Administrative Accountsc:**
+* **Restrict Administrative Accounts:**
 Before actually deploying ransomware attackers often try to scope and move through the infected network to increase the potential damage that could be done. For this domain-wide administrative accounts are a lucrative target. Make sure that all administrators have a low privileged user account for their daily tasks and only switch to their administrative account when absolutely necessary. Administrative accounts should also follow the least-privilege principle and domain administrators should be used even more limited. Another point to remember is to use dedicated accounts for services and not use administrative accounts when possible. 
 
 ```
