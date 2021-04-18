@@ -10,7 +10,20 @@
 | **Status**        | Draft         |
 | **Created**       | 2020-12-20    |
 
-## Description
+
+## Content
+
+1. [Description](#desc)
+2. [Safeguards](#safe)
+3. [Preparation](#prep)
+4. [Detection / Discovery](#dect)
+5. [Containment / Mitigation](#con)
+6. [Analysis](#analysis)
+7. [Remediation](#rem)
+8. [Recovery](#rec)
+9. [Post Morten](#post)
+
+## Description <a name="desc"></a>
 
 Ransomware attacks can be characterized by infecting large segments of an existing network and encrypting data on server and client systems without the possibility for the legitimate users to get access to this data. The decryption key/mechanism will then be presented to the legitimate user by the attacker in exchange for a more or less reasonable amount of money, most likely in the form of digital currency like bitcoin. The attacker will leave information on the encrypted system on how to contact them for payment and retrieving the decryption methods.  
 Ransomware became one of the most lucrative cyberattacks in the recent years and is often spread with phishing campaigns against end users or by exploiting unpatched vulnerabilities in external facing systems. Most times the attackers have had deep system access for a long time before the actual encryption of data.  
@@ -18,7 +31,7 @@ In the event of a ransomware-attack fast response is critical since this could s
 Ransomware events are most likely only the end of an ongoing infiltration of a network. In many cases the attackers will already mapped your network and gathered credentials long before. Even the extortion of data over a long time span is not uncommon nowadays.  
 Ransomware in particular is still mostly focused on Windows based systems and domains. The recommendations in this playbook aim to be universal but may sometimes be specific to Windows systems.
 
-## Safeguards
+## Safeguards <a name="safe"></a>
 
 These Safeguards are designed to limit the spread and/or impact of a potential ransomware infection. Since ransomware infections often come with wide-spread network compromise the safeguards are also focused on this part. 
 
@@ -85,7 +98,7 @@ Uses are still the number one vulnerability in every infrastructure no matter th
 VPN when not properly secured offer an easy way for an attacker to infiltrate a network. Make sure to protect your VPN with current encryption methods, client-certificates and multi-factor authentication. Make as many services available through the VPN but not the internet to reduce your external perimeter. For Site2Site VPNs with third parties make sure that they only reach the needed targets and always configure with least privileges principle in mind.   
 Also make sure to properly monitor and log authentication requests to find anomalies. 
 
-## Preparation
+## Preparation <a name="prep"></a>
 
 ### Network orchestration tools
 When dealing with ransomware attacks it is helpful to have a hardware and software inventory as well as the possibility to roll out patches and software, make configuration changes and populate software to systems in the network. For example to schedule certain scans or patch for known vulnerabilities.
@@ -133,7 +146,7 @@ Ransomware impact often get to know first by the end users of systems and servic
 ### Insurance
 Since cyber incidents as any other incidents can cause serious damage and inflict unknown costs it is possible to insure the residual risk for cyber incidents. It is not always the best option, but it should at least be known that this is a possibility.
 
-## Detection / Discovery
+## Detection / Discovery <a name="dect"></a>
 Detecting Ransomware is normally quite easy since it is a "loud" attack event in its nature. Ransomware events that were successful can most times be identified by:
 
 ### Ransomware notes
@@ -166,7 +179,7 @@ Executables files that pop up on one or more systems without any reasonable expl
 ### Documentation
 Starting with the discovery phase it is crucial to create and continue a documentation of the planned and carried out actions as well as additional information and sightings belonging to the case. This way it is easily possible to on-board new members to the case, hand over to third parties and will be from great value for potential later involvement of authorities. Furthermore, this way improvement to the incident response processes and infrastructure can be easily derived later on. 
 
-## Containment / Mitigation
+## Containment / Mitigation <a name="con"></a>
 Containment of a ransomware threat should better be done too broad then to little. Include at least all systems that show symptoms and incorporate all possible information you can get from the analysis steps.
 When containing the infection it can sometime be more effective to focus on the systems that are not infected or show no signs of infection and make sure that they can't get infected later on.
 
@@ -203,7 +216,7 @@ Prepare your communication for employees and external sources because you will l
 ### Documentation
 Keep in mind to document all actions that were done. 
 
-## Analysis
+## Analysis <a name="analysis"></a>
 Analysis of such incidents should be conducted by a properly trained person. This documentation can only help to provide the most basics steps and give you some kind of guideline.  
 For analysis steps always make sure to not tamper with the information. Make copies of the original data and work with them. Only mount file systems as read-only to not change any data. Take extra care with live malware and commands/scripts to not infected clean systems.
 
@@ -248,7 +261,7 @@ Another way is the use of backdoor or rootkit removal tools like Kaspersky [TDSS
  Keep in mind to document all actions that you conducted as well as the results. 
 
 
-## Remediation
+## Remediation <a name="rem"></a>
 
 ### Close the attack vector
 It is crucial to identify the attack vector and lateral movement techniques used and properly close them. Otherwise, the same vulnerabilities could be exploited again by the same or other attackers in very short time. When the attack vector could not be identified properly you have to make sure to properly increase overall it-security to enhance monitoring and implement safeguards for all identified techniques the attackers have used or abused.
@@ -268,7 +281,7 @@ Adjust your security appliances like firewalls, IDS/IPS and endpoint protection 
 ### Documentation
 Keep in mind to document all actions that were done. 
 
-## Recovery
+## Recovery <a name="rec"></a>
 Recovery can be started after the remediation efforts are done or beforehand in a completely new network zone that has initially no ties to the infected network. When needed the infected systems can be continued to be used with great care and connectivity to other systems should be limited to known good services and protocols. (For example with firewall rules)
 
 ### Rebuild or cleanse infected systems in a new network zone
@@ -293,7 +306,7 @@ After a major incident you will spin up system by system and service by service.
 ### Documentation
 As always keep in mind to document all actions that were done. 
 
-## Post Morten
+## Post Morten <a name="post"></a>
 Review your created documentation and conduct lessons learned sessions to improve the overall process of incident handling as well as overall IT security.
 
 ### Review the incident response process
