@@ -6,7 +6,7 @@
 |-|-|
 | **ID**            | IR-EN-001     |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
-| **Last Modified** | 2021-01-22    |
+| **Last Modified** | 2021-04-18    |
 | **Status**        | Draft         |
 | **Created**       | 2020-12-20    |
 
