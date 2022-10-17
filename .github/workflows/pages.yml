@@ -23,8 +23,10 @@ jobs:
       - name: Install a binary from GitHub releases
         uses: jaxxstorm/action-install-gh-release@v1.7.1
         with: # Install mdbook-admonish binary from GitHub releases
-            repo: tommilligan/mdbook-admonish   
-            tag: v1.7.0            
+          repo: tommilligan/mdbook-admonish   
+          tag: v1.7.0  
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: mdbook build
 
