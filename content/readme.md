@@ -48,8 +48,9 @@ It is planned to design the playbooks according to multiple standards and format
 
 Focus lays in PDF and Markdown Playbooks but other sources may be included.
 
-Currently planned:
+```admonish info title="Currently planned"
 * PDF
 * Markdown
 * Hive Template
 * COPS
+```
