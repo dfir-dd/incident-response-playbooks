@@ -4,35 +4,29 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Ransomware Playbook - DFIR Playbooks and Wiki</title>
-                
-
         <!-- Custom HTML head -->
-        
-
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="DFIR Playbooks and Wiki.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-                <link rel="icon" href="../../favicon.svg">
-                        <link rel="shortcut icon" href="../../favicon.png">
-                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/chrome.css">
-                <link rel="stylesheet" href="../../css/print.css" media="print">
-        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
         <!-- Fonts -->
         <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
-                <link rel="stylesheet" href="../../fonts/fonts.css">
-        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../highlight.css">
         <link rel="stylesheet" href="../../tomorrow-night.css">
         <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        
-            </head>
+        <link rel="stylesheet" href="../../././mdbook-admonish.css">
+    </head>
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
@@ -82,14 +76,14 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Playbooks</li><li class="chapter-item expanded "><a href="../../playbooks/index.html"><strong aria-hidden="true">1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../../playbooks/Ransomware/ransomware-playbook.html" class="active"><strong aria-hidden="true">2.</strong> Ransomware Playbook</a></li><li class="chapter-item expanded "><a href="../../playbooks/DoS/dos_ddos-playbook.html"><strong aria-hidden="true">3.</strong> DDoS Playbook</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Playbooks</li><li class="chapter-item expanded "><a href="../../playbooks/index.html"><strong aria-hidden="true">1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../../playbooks/Ransomware/ransomware-playbook.html" class="active"><strong aria-hidden="true">2.</strong> Ransomware Playbook</a></li><li class="chapter-item expanded "><a href="../../playbooks/DoS/dos_ddos-playbook.html"><strong aria-hidden="true">3.</strong> DDoS Playbook</a></li></ol>
+            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -106,22 +100,21 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                                            </div>
+                    </div>
 
                     <h1 class="menu-title">DFIR Playbooks and Wiki</h1>
 
                     <div class="right-buttons">
-                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                                                                        
                     </div>
                 </div>
 
-                                <div id="search-wrapper" class="hidden">
+                <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
@@ -131,7 +124,6 @@
                         </ul>
                     </div>
                 </div>
-                
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -164,13 +156,13 @@
 <li><a href="#rec">Recovery</a></li>
 <li><a href="#post">Post Morten</a></li>
 </ol>
-<h2 id="description-a-namedesca"><a class="header" href="#description-a-namedesca">Description <a name="desc"></a></a></h2>
+<h2 id="description"><a class="header" href="#description">Description <a name="desc"></a></a></h2>
 <p>Ransomware attacks can be characterized by infecting large segments of an existing network and encrypting data on server and client systems without the possibility for the legitimate users to get access to this data. The decryption key/mechanism will then be presented to the legitimate user by the attacker in exchange for a more or less reasonable amount of money, most likely in the form of digital currency like bitcoin. The attacker will leave information on the encrypted system on how to contact them for payment and retrieving the decryption methods.<br />
 Ransomware became one of the most lucrative cyberattacks in the recent years and is often spread with phishing campaigns against end users or by exploiting unpatched vulnerabilities in external facing systems. Most times the attackers have had deep system access for a long time before the actual encryption of data.<br />
 In the event of a ransomware-attack fast response is critical since this could stop ongoing encryption and lateral movement. Most times a hard organization-wide shutdown can't be avoided, but the recovery time can highly depend upon the maturity of the incident response program of the organization. <br />
 Ransomware events are most likely only the end of an ongoing infiltration of a network. In many cases the attackers will already mapped your network and gathered credentials long before. Even the extortion of data over a long time span is not uncommon nowadays.<br />
 Ransomware in particular is still mostly focused on Windows based systems and domains. The recommendations in this playbook aim to be universal but may sometimes be specific to Windows systems.</p>
-<h2 id="safeguards-a-namesafea"><a class="header" href="#safeguards-a-namesafea">Safeguards <a name="safe"></a></a></h2>
+<h2 id="safeguards"><a class="header" href="#safeguards">Safeguards <a name="safe"></a></a></h2>
 <p>These Safeguards are designed to limit the spread and/or impact of a potential ransomware infection. Since ransomware infections often come with wide-spread network compromise the safeguards are also focused on this part. </p>
 <h3 id="mature-patch-management"><a class="header" href="#mature-patch-management">Mature Patch Management</a></h3>
 <p>When preparing for cyberattacks in general it is highly advised to implement available patches in a safe and fast manner. This way known vulnerabilities can be tackled and the exploitation of these can be stopped.<br />
@@ -229,7 +221,7 @@ Common management interfaces exists for Web Apps, Network components like firewa
 <h3 id="vpn"><a class="header" href="#vpn">VPN</a></h3>
 <p>VPN when not properly secured offer an easy way for an attacker to infiltrate a network. Make sure to protect your VPN with current encryption methods, client-certificates and multi-factor authentication. Make as many services available through the VPN but not the internet to reduce your external perimeter. For Site2Site VPNs with third parties make sure that they only reach the needed targets and always configure with least privileges principle in mind. <br />
 Also make sure to properly monitor and log authentication requests to find anomalies. </p>
-<h2 id="preparation-a-nameprepa"><a class="header" href="#preparation-a-nameprepa">Preparation <a name="prep"></a></a></h2>
+<h2 id="preparation"><a class="header" href="#preparation">Preparation <a name="prep"></a></a></h2>
 <h3 id="network-orchestration-tools"><a class="header" href="#network-orchestration-tools">Network orchestration tools</a></h3>
 <p>When dealing with ransomware attacks it is helpful to have a hardware and software inventory as well as the possibility to roll out patches and software, make configuration changes and populate software to systems in the network. For example to schedule certain scans or patch for known vulnerabilities.</p>
 <h3 id="ioc-scans-for-network-traffic-and-hosts"><a class="header" href="#ioc-scans-for-network-traffic-and-hosts">IoC scans for network traffic and hosts</a></h3>
@@ -270,7 +262,7 @@ This involves testing back-ups and how fast you can roll back as well as organiz
 <p>Ransomware impact often get to know first by the end users of systems and services therefore it is important that these users and the service desk (first level support) where the users will raise their problems are properly trained to detect the signs of system compromise and ransomware infections and that they know where and how to escalate these issues to enable fast first response. </p>
 <h3 id="insurance"><a class="header" href="#insurance">Insurance</a></h3>
 <p>Since cyber incidents as any other incidents can cause serious damage and inflict unknown costs it is possible to insure the residual risk for cyber incidents. It is not always the best option, but it should at least be known that this is a possibility.</p>
-<h2 id="detection--discovery-a-namedecta"><a class="header" href="#detection--discovery-a-namedecta">Detection / Discovery <a name="dect"></a></a></h2>
+<h2 id="detection--discovery"><a class="header" href="#detection--discovery">Detection / Discovery <a name="dect"></a></a></h2>
 <p>Detecting Ransomware is normally quite easy since it is a &quot;loud&quot; attack event in its nature. Ransomware events that were successful can most times be identified by:</p>
 <h3 id="ransomware-notes"><a class="header" href="#ransomware-notes">Ransomware notes</a></h3>
 <p>Ransomware notes often come in the form of human-readable text files that include information about what happened (encryption) and how to retrieve the original files (payment). Sometimes also screen backgrounds are changed or new programs are deployed that open up automatically and inform about the ransom.</p>
@@ -292,7 +284,7 @@ This involves testing back-ups and how fast you can roll back as well as organiz
 <p>Executables files that pop up on one or more systems without any reasonable explanation as well as new auto-start entries are usually a bad sign.</p>
 <h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
 <p>Starting with the discovery phase it is crucial to create and continue a documentation of the planned and carried out actions as well as additional information and sightings belonging to the case. This way it is easily possible to on-board new members to the case, hand over to third parties and will be from great value for potential later involvement of authorities. Furthermore, this way improvement to the incident response processes and infrastructure can be easily derived later on. </p>
-<h2 id="containment--mitigation-a-namecona"><a class="header" href="#containment--mitigation-a-namecona">Containment / Mitigation <a name="con"></a></a></h2>
+<h2 id="containment--mitigation"><a class="header" href="#containment--mitigation">Containment / Mitigation <a name="con"></a></a></h2>
 <p>Containment of a ransomware threat should better be done too broad then to little. Include at least all systems that show symptoms and incorporate all possible information you can get from the analysis steps.
 When containing the infection it can sometime be more effective to focus on the systems that are not infected or show no signs of infection and make sure that they can't get infected later on.</p>
 <h3 id="reset-or-lock-compromised-accounts"><a class="header" href="#reset-or-lock-compromised-accounts">Reset or lock compromised accounts</a></h3>
@@ -317,7 +309,7 @@ When containing the infection it can sometime be more effective to focus on the 
 <p>Prepare your communication for employees and external sources because you will likely be running a limited network for the next couple of days or even weeks. External communication is also crucial when PII is suspect to be disclosed.</p>
 <h3 id="documentation-1"><a class="header" href="#documentation-1">Documentation</a></h3>
 <p>Keep in mind to document all actions that were done. </p>
-<h2 id="analysis-a-nameanalysisa"><a class="header" href="#analysis-a-nameanalysisa">Analysis <a name="analysis"></a></a></h2>
+<h2 id="analysis"><a class="header" href="#analysis">Analysis <a name="analysis"></a></a></h2>
 <p>Analysis of such incidents should be conducted by a properly trained person. This documentation can only help to provide the most basics steps and give you some kind of guideline.<br />
 For analysis steps always make sure to not tamper with the information. Make copies of the original data and work with them. Only mount file systems as read-only to not change any data. Take extra care with live malware and commands/scripts to not infected clean systems.</p>
 <h3 id="determine-the-ransomwaremalware-type"><a class="header" href="#determine-the-ransomwaremalware-type">Determine the Ransomware/Malware type</a></h3>
@@ -359,7 +351,7 @@ Another way is the use of backdoor or rootkit removal tools like Kaspersky <a hr
   </p>
 <h3 id="documentation-2"><a class="header" href="#documentation-2">Documentation</a></h3>
 <p> Keep in mind to document all actions that you conducted as well as the results. </p>
-<h2 id="remediation-a-namerema"><a class="header" href="#remediation-a-namerema">Remediation <a name="rem"></a></a></h2>
+<h2 id="remediation"><a class="header" href="#remediation">Remediation <a name="rem"></a></a></h2>
 <h3 id="close-the-attack-vector"><a class="header" href="#close-the-attack-vector">Close the attack vector</a></h3>
 <p>It is crucial to identify the attack vector and lateral movement techniques used and properly close them. Otherwise, the same vulnerabilities could be exploited again by the same or other attackers in very short time. When the attack vector could not be identified properly you have to make sure to properly increase overall it-security to enhance monitoring and implement safeguards for all identified techniques the attackers have used or abused.</p>
 <h3 id="patching"><a class="header" href="#patching">Patching</a></h3>
@@ -372,7 +364,7 @@ Another way is the use of backdoor or rootkit removal tools like Kaspersky <a hr
 <p>Adjust your security appliances like firewalls, IDS/IPS and endpoint protection systems to identify the known indicators from the attack and be prepared for new outbreaks of malware beacons that were missed beforehand.</p>
 <h3 id="documentation-3"><a class="header" href="#documentation-3">Documentation</a></h3>
 <p>Keep in mind to document all actions that were done. </p>
-<h2 id="recovery-a-namereca"><a class="header" href="#recovery-a-namereca">Recovery <a name="rec"></a></a></h2>
+<h2 id="recovery"><a class="header" href="#recovery">Recovery <a name="rec"></a></a></h2>
 <p>Recovery can be started after the remediation efforts are done or beforehand in a completely new network zone that has initially no ties to the infected network. When needed the infected systems can be continued to be used with great care and connectivity to other systems should be limited to known good services and protocols. (For example with firewall rules)</p>
 <h3 id="rebuild-or-cleanse-infected-systems-in-a-new-network-zone"><a class="header" href="#rebuild-or-cleanse-infected-systems-in-a-new-network-zone">Rebuild or cleanse infected systems in a new network zone</a></h3>
 <p>Infected systems should be rebuilt from scratch with hardened blueprints in a new network zone without or with very limited connectivity to the infected network. When an analysis of the incident was conducted it sometimes can be possible to cleanse infected systems with known IOCs and not rebuilding them from scratch. But in most cases this will pose a great residual risk.</p>
@@ -388,7 +380,7 @@ Another way is the use of backdoor or rootkit removal tools like Kaspersky <a hr
 <p>After a major incident you will spin up system by system and service by service. During this time and afterwards it could be a good invest to monitor the network traffic and search for anything that does not look like it belongs there. Heavy inter-machine communication. External traffic from internal system using unusual protocols, etc. . This becomes even more crucial when you want to include some &quot;old&quot; systems and not rebuild literally everything.</p>
 <h3 id="documentation-4"><a class="header" href="#documentation-4">Documentation</a></h3>
 <p>As always keep in mind to document all actions that were done. </p>
-<h2 id="post-morten-a-nameposta"><a class="header" href="#post-morten-a-nameposta">Post Morten <a name="post"></a></a></h2>
+<h2 id="post-morten"><a class="header" href="#post-morten">Post Morten <a name="post"></a></a></h2>
 <p>Review your created documentation and conduct lessons learned sessions to improve the overall process of incident handling as well as overall IT security.</p>
 <h3 id="review-the-incident-response-process"><a class="header" href="#review-the-incident-response-process">Review the incident response process</a></h3>
 <p>Enhance the response process for later incidents by collecting what went good and what not. Identify steps that needed more preparation and use the advice that was given by any involved parties throughout the response. </p>
@@ -404,49 +396,38 @@ But this is also crucial for you ongoing risk analysis and cost-benefit analysis
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../../playbooks/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../playbooks/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                        
-                                                    <a rel="next" href="../../playbooks/DoS/dos_ddos-playbook.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../../playbooks/DoS/dos_ddos-playbook.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
-                        
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../../playbooks/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../playbooks/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                
-                                    <a rel="next" href="../../playbooks/DoS/dos_ddos-playbook.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../playbooks/DoS/dos_ddos-playbook.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
-                            </nav>
+            </nav>
 
         </div>
 
-        
-        
-        
-                <script type="text/javascript">
+        <script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        
-        
-                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
-        
         <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        
-        
     </body>
 </html>
