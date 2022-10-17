@@ -19,6 +19,9 @@ jobs:
         with:
           mdbook-version: '0.4.10'
           # mdbook-version: 'latest'
+          
+      - name: Install mdbook-admonish binary from GitHub releases
+        uses: tommilligan/mdbook-admonish/releases@v1.7.0          
 
       - run: mdbook build
 
