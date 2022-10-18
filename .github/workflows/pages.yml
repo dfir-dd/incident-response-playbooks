@@ -13,6 +13,8 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
+      
+      - run: ls
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
@@ -29,6 +31,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: mdbook build
+      
+      - run: ls
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
