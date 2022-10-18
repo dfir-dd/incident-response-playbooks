@@ -62,6 +62,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: gh-pages
           branch: gh-pages
 
      # Removing actions-gh-pages since it does not recognize changes in repo
