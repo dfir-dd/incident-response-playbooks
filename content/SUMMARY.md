@@ -36,6 +36,11 @@
   - [USB Devices](wiki/nix/usb-devices.md)
   - [Browser Artefacts](wiki/nix/browser-artefacts.md)
 
+- [Forensic Analysis in Cloud Environment](wiki/cloud/README.md)
+  - [Azure Cloud Analysis](wiki/cloud/azure.md)
+  - [AWS Cloud Analysis](wiki/cloud/AWS.md)
+  - [Google Cloud Analysis](wiki/cloud/google.md)
+
 - [Log Analysis](wiki/logs/README.md)
 - [Malware Analysis](wiki/malware/README.md)
 - [Data Carving](wiki/carving/README.md)
@@ -43,3 +48,5 @@
 -----------
 
 [Contributors](misc/contributors.md)
+[Impress](misc/impress.md)
+[Copyright](misc/copyright.md)
