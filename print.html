@@ -567,7 +567,62 @@ To help further harden your infrastructure think about external review opportuni
 <div>
 <p>This page will be a reference to all the tools listed in this wiki</p>
 </div>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="forensic-analysis-of-windows-systems"><a class="header" href="#forensic-analysis-of-windows-systems">Forensic Analysis of Windows Systems</a></h1>
+</div>
+<div id="admonition-tip" class="admonition tip">
+<div class="admonition-title">
+<p>Tip</p>
+<p><a class="admonition-anchor-link" href="wiki/general/tools.html#admonition-tip"></a></p>
+</div>
+<div>
+<p>Curated lists of forensic tools are also available from the SANS Institute, the Awesome Forensics GitHub List or in the Forensic Wiki.</p>
+<ul>
+<li><a href="https://www.sans.org/tools/?focus-area=digital-forensics&amp;msc=dfir-lp">SANS Cyber Security Tools - DFIR</a></li>
+<li><a href="https://github.com/cugu/awesome-forensics">Awesome Forensics GitHub</a></li>
+<li><a href="https://forensicswiki.xyz/wiki/index.php?title=Category:Tools">Forensics Wiki - Tools</a></li>
+</ul>
+</div>
+</div>
+<h2 id="malware-analysis"><a class="header" href="#malware-analysis">Malware Analysis</a></h2>
+<h3 id="malware-sandboxes"><a class="header" href="#malware-sandboxes">Malware Sandboxes</a></h3>
+<div id="admonition-danger" class="admonition danger">
+<div class="admonition-title">
+<p>Danger</p>
+<p><a class="admonition-anchor-link" href="wiki/general/tools.html#admonition-danger"></a></p>
+</div>
+<div>
+<p>Be careful when uploading malware samples from active cases to public cloud systems as you may not want to let the attacker know you found some binaries from him. Use Hash-Search options first.</p>
+</div>
+</div>
+<table><thead><tr><th>Tool</th><th>Description</th><th>Platform</th><th>Link</th></tr></thead><tbody>
+<tr><td>AnyRun</td><td>Malware Sandbox with windows machines. Only Win7 and public analysis in free tier.</td><td>Cloud</td><td><a href="https://app.any.run/">https://app.any.run/</a></td></tr>
+<tr><td>Cuckoo Sandbox</td><td>Open Source Malware Sandbox supporting all platforms as host-machines. Has to be set-up first.</td><td>Win, Linux, OS X</td><td><a href="https://cuckoosandbox.org/">https://cuckoosandbox.org/</a></td></tr>
+<tr><td>Intezer Analyzer</td><td>Malware Sandbox. Only limited insights in free tier.</td><td>Cloud</td><td><a href="https://analyze.intezer.com/">https://analyze.intezer.com/</a></td></tr>
+<tr><td>Hybrid Analysis Sandbox</td><td>Malware Sandbox based on CrowdStrike Falcon. Only limited insights in free tier.</td><td>Cloud</td><td><a href="https://www.hybrid-analysis.com/">https://www.hybrid-analysis.com/</a></td></tr>
+<tr><td>JoeSandbox</td><td>Malware Sandbox with support for many different host systems including android but limited extent in the free tier. Can be hosted on premise in paid tiers.</td><td>Cloud</td><td><a href="https://www.joesandbox.com/">https://www.joesandbox.com/</a></td></tr>
+<tr><td>Cape Sandbox</td><td>Sandbox focused on extracting payloads from known malware families. OpenSource.</td><td>Cloud</td><td><a href="https://capesandbox.com/%5D">https://capesandbox.com/</a></td></tr>
+<tr><td>FileScan</td><td>Not a real sandbox, focused on static analysis</td><td>Cloud</td><td><a href="https://www.filescan.io/scan">https://www.filescan.io/scan</a></td></tr>
+</tbody></table>
+<h3 id="malware-search-engines"><a class="header" href="#malware-search-engines">Malware Search Engines</a></h3>
+<div id="admonition-danger-1" class="admonition danger">
+<div class="admonition-title">
+<p>Danger</p>
+<p><a class="admonition-anchor-link" href="wiki/general/tools.html#admonition-danger-1"></a></p>
+</div>
+<div>
+<p>Be careful when uploading malware samples from active cases to public cloud systems as you may not want to let the attacker know you found some binaries from him. Use Hash-Search options first.</p>
+</div>
+</div>
+<table><thead><tr><th>Tool</th><th>Description</th><th>Platform</th><th>Link</th></tr></thead><tbody>
+<tr><td>VirusTotal</td><td>Lets you run malware in over 80 different Virus Scan Engines and get their detections back.</td><td>Cloud</td><td><a href="https://www.virustotal.com/">https://www.virustotal.com/</a></td></tr>
+<tr><td>Virusshare</td><td>Malware Database. Allows for download of samples and search.</td><td>Cloud</td><td><a href="https://virusshare.com/">https://virusshare.com/</a></td></tr>
+</tbody></table>
+<h3 id="disassembler"><a class="header" href="#disassembler">Disassembler</a></h3>
+<table><thead><tr><th>Tool</th><th>Description</th><th>Platform</th><th>Link</th></tr></thead><tbody>
+<tr><td>IDA Pro</td><td>Disassembler and Debugger for static analysis and reverse engineering</td><td>Win, Linux, OS X</td><td><a href="https://www.hex-rays.com/ida-pro/">https://www.hex-rays.com/ida-pro/</a></td></tr>
+<tr><td>Ghidra</td><td>Disassembler and Debugger for static analysis and reverse engineering</td><td>Java</td><td><a href="https://ghidra-sre.org/">https://ghidra-sre.org/</a></td></tr>
+<tr><td>Binary Ninja</td><td>Disassembler and Decompiler for static analysis and reverse engineering</td><td>Win, Linux, OS X</td><td><a href="https://binary.ninja/">https://binary.ninja/</a></td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="forensic-analysis-of-windows-systems"><a class="header" href="#forensic-analysis-of-windows-systems">Forensic Analysis of Windows Systems</a></h1>
 <div id="admonition-this-page-is-currently-under-construction" class="admonition warning">
 <div class="admonition-title">
 <p>This page is currently under construction</p>
@@ -735,7 +790,7 @@ To help further harden your infrastructure think about external review opportuni
 </div>
 <div>
 </div>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="malware-analysis"><a class="header" href="#malware-analysis">Malware Analysis</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="malware-analysis-1"><a class="header" href="#malware-analysis-1">Malware Analysis</a></h1>
 <div id="admonition-this-page-is-currently-under-construction" class="admonition warning">
 <div class="admonition-title">
 <p>This page is currently under construction</p>
