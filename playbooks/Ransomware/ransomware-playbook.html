@@ -144,11 +144,11 @@
                         <h1 id="incident-response-playbook---ransomware-infection"><a class="header" href="#incident-response-playbook---ransomware-infection">Incident Response Playbook - Ransomware Infection</a></h1>
 <h2 id="metadata"><a class="header" href="#metadata">Metadata</a></h2>
 <table><thead><tr><th></th><th></th></tr></thead><tbody>
-<tr><td><strong>ID</strong>           </td><td>IR-EN-001     </td></tr>
-<tr><td><strong>Title</strong>         </td><td>Incident Response Playbook - Ransomware Infection</td></tr>
-<tr><td><strong>Last Modified</strong></td><td>2021-04-18   </td></tr>
-<tr><td><strong>Status</strong>       </td><td>Draft         </td></tr>
-<tr><td><strong>Created</strong>       </td><td>2020-12-20   </td></tr>
+<tr><td><strong>ID</strong></td><td>IR-EN-001</td></tr>
+<tr><td><strong>Title</strong></td><td>Incident Response Playbook - Ransomware Infection</td></tr>
+<tr><td><strong>Last Modified</strong></td><td>2021-04-18</td></tr>
+<tr><td><strong>Status</strong></td><td>Draft</td></tr>
+<tr><td><strong>Created</strong></td><td>2020-12-20</td></tr>
 </tbody></table>
 <h2 id="content"><a class="header" href="#content">Content</a></h2>
 <ol>
@@ -169,7 +169,7 @@ In the event of a ransomware-attack fast response is critical since this could s
 Ransomware events are most likely only the end of an ongoing infiltration of a network. In many cases the attackers will already mapped your network and gathered credentials long before. Even the extortion of data over a long time span is not uncommon nowadays.<br />
 Ransomware in particular is still mostly focused on Windows based systems and domains. The recommendations in this playbook aim to be universal but may sometimes be specific to Windows systems.</p>
 <h2 id="safeguards"><a class="header" href="#safeguards">Safeguards <a name="safe"></a></a></h2>
-<p>These Safeguards are designed to limit the spread and/or impact of a potential ransomware infection. Since ransomware infections often come with wide-spread network compromise the safeguards are also focused on this part. </p>
+<p>These Safeguards are designed to limit the spread and/or impact of a potential ransomware infection. Since ransomware infections often come with wide-spread network compromise the safeguards are also focused on this part.</p>
 <h3 id="mature-patch-management"><a class="header" href="#mature-patch-management">Mature Patch Management</a></h3>
 <p>When preparing for cyberattacks in general it is highly advised to implement available patches in a safe and fast manner. This way known vulnerabilities can be tackled and the exploitation of these can be stopped.<br />
 It is important to keep in mind that not only all available components including network components (routers, switches, etc), servers, endpoints and appliances including security appliances need to be in focus. Also patches need to be tested for the internal use and then applied to the systems in focus within a reasonable time frame depending on the criticality of the issues being fixed.<br />
@@ -201,10 +201,11 @@ Make sure that all administrators have a low privileged user account for their d
 <li>Firewall / IDS: Firewalls and IDS have the possibility to block communication to C&amp;C servers and potential downloads of Malware. </li>
 <li>E-Mail Security: Mails including malicious attachments or links are a common tool for attackers. Make sure to have a proper configured spam filter in place and block incoming mails with executable attachments including office documents and content of archive files. Links within mails should be checked as well. </li>
 <li>Managed Endpoint Protection: The endpoint protection solution should be central managed to have a unified view on alerts and the possibility to roll out measures to all devices simultaneously. </li>
-<li>Web-Proxy: Implementing a web-proxy for all connections terminating outside the organizational network can help to monitor and restrict outgoing traffic. Furthermore, Malware which is not proxy-aware could be hindered. For servers internet connectivity should be monitored and restricted even more and a custom proxy could be used. </li>
+<li>Web-Proxy: Implementing a web-proxy for all connections terminating outside the organizational network can help to monitor and restrict outgoing traffic. Furthermore, Malware which is not proxy-aware could be hindered. For servers internet connectivity should be monitored and restricted even more and a custom proxy could be used.</li>
 </ul>
 <h3 id="endpoint-hardening"><a class="header" href="#endpoint-hardening">Endpoint Hardening</a></h3>
-<p>Malware infections often start from one host and later spread through the network. Therefore, the protection of all endpoints is crucial. Make sure to limit access and available services to reduce the attack surface. </p>
+<p>Malware infections often start from one host and later spread through the network. Therefore, the protection of all endpoints is crucial. Make sure to limit access and available services to reduce the attack surface.
+ </p>
 <ul>
 <li>Use endpoint hardening checklists offered by the CIS or other organizations to reduce the attack surface</li>
 <li>Remove old and unpatched systems from the network</li>
@@ -236,8 +237,7 @@ Also make sure to properly monitor and log authentication requests to find anoma
 <p>A strict network segmentation enables the possibility to isolate and quarantine certain systems and segments that seem to be infected without having to pull the plug. </p>
 <h3 id="central-log-management"><a class="header" href="#central-log-management">Central Log management</a></h3>
 <p>For analysis of incidents log data is key. Since attackers do know this as well they often seek to destroy or manipulate log data. A central, secured log service can help for later investigation of the incident, impact and attack methods used. Best utilized is a central log service when all log data is synchronized with a central timeserver and uses a common log format. Central log server should be properly secured to keep attackers at bay and store the data for some time in the past to enable thorough investigations (30 - 90 days considering priority). 
-Logs should be collected for network data (at least netflow), for internal traffic as well as external traffic. DNS requests. System security logs. Authentication logs. Service logs for important services.
-   </p>
+Logs should be collected for network data (at least netflow), for internal traffic as well as external traffic. DNS requests. System security logs. Authentication logs. Service logs for important services.</p>
 <h3 id="enhance-your-logging"><a class="header" href="#enhance-your-logging">Enhance your logging</a></h3>
 <p>There are different ways to further increase logging to identify access to critical data. For example with the Windows last access timestamp that can be enabled for certain folders and file shares or WMI Trace Logs. Comparable means are available for other systems as well. Also make sure to properly size your log files to stop them from fast log rotating. Windows and Linux system log sizes can be adjusted. (This is crucial for important server systems like file shares, management systems, domain controller etc. and the central system and security log files)</p>
 <h3 id="network-and-business-knowledge"><a class="header" href="#network-and-business-knowledge">Network and business knowledge</a></h3>
@@ -265,7 +265,7 @@ This involves testing back-ups and how fast you can roll back as well as organiz
 <li>If and when to pay a ransom</li>
 </ul>
 <h3 id="user-and-service-desk-awareness"><a class="header" href="#user-and-service-desk-awareness">User and service desk awareness</a></h3>
-<p>Ransomware impact often get to know first by the end users of systems and services therefore it is important that these users and the service desk (first level support) where the users will raise their problems are properly trained to detect the signs of system compromise and ransomware infections and that they know where and how to escalate these issues to enable fast first response. </p>
+<p>Ransomware impact often get to know first by the end users of systems and services therefore it is important that these users and the service desk (first level support) where the users will raise their problems are properly trained to detect the signs of system compromise and ransomware infections and that they know where and how to escalate these issues to enable fast first response.</p>
 <h3 id="insurance"><a class="header" href="#insurance">Insurance</a></h3>
 <p>Since cyber incidents as any other incidents can cause serious damage and inflict unknown costs it is possible to insure the residual risk for cyber incidents. It is not always the best option, but it should at least be known that this is a possibility.</p>
 <h2 id="detection--discovery"><a class="header" href="#detection--discovery">Detection / Discovery <a name="dect"></a></a></h2>
@@ -275,21 +275,21 @@ This involves testing back-ups and how fast you can roll back as well as organiz
 <h3 id="encrypted-files"><a class="header" href="#encrypted-files">Encrypted Files</a></h3>
 <p>When successful ransomware attacks will encrypt many files on the infected systems, overwriting the original files. The encryption focuses on data that has value speaking of databases and documents and not log files or executables. The encrypted files can be identified by their new file ending which is most likely cryptic or because the file can't be opened and read as normal as before.</p>
 <h3 id="unusual-high-load"><a class="header" href="#unusual-high-load">Unusual high load</a></h3>
-<p>When the encryption is ongoing the system may see unusual high load. For example with high CPU usage, high Disk(I/O) usage and unusual many file and folder access calls. This can be monitored through many tools and should be investigated further. </p>
+<p>When the encryption is ongoing the system may see unusual high load. For example with high CPU usage, high Disk(I/O) usage and unusual many file and folder access calls. This can be monitored through many tools and should be investigated further.</p>
 <h3 id="anti-virus-or-ids-events"><a class="header" href="#anti-virus-or-ids-events">Anti-virus or IDS Events</a></h3>
 <p>Events of your security appliances should be thoroughly monitored and investigated. For ransomware events look out for privilege escalation attempts, widespread use of one account through many systems, unusual administrative account usage (shell usage, WMI, etc.) and blocked execution of unknown software that occurs on multiple systems. </p>
 <h3 id="beacon-file-monitoring"><a class="header" href="#beacon-file-monitoring">Beacon file monitoring </a></h3>
-<p>Many security appliances nowadays use custom deployed beacon files to watch whether they get accessed or changed later on and alert in this case. When such an event occurred on a single system make sure to investigate the access and see whether this was unintentional user behaviour or something malicious. When such alerting occurs in a short time span on multiple systems this is nearly always a good indicator for a ransomware infection. </p>
+<p>Many security appliances nowadays use custom deployed beacon files to watch whether they get accessed or changed later on and alert in this case. When such an event occurred on a single system make sure to investigate the access and see whether this was unintentional user behaviour or something malicious. When such alerting occurs in a short time span on multiple systems this is nearly always a good indicator for a ransomware infection.</p>
 <h3 id="user-reports"><a class="header" href="#user-reports">User reports</a></h3>
-<p>In most cases the users will be the first to notice the impact of a successful ransomware infection. In these cases some systems may not be working as expected or information can no longer be retrieved. When such user reports come in make sure to investigate them and look for other indicators of ransomware. Therefore, it is important to properly train your first level support desk to handle these reports and first-hand investigation in a safe and timely manner. </p>
+<p>In most cases the users will be the first to notice the impact of a successful ransomware infection. In these cases some systems may not be working as expected or information can no longer be retrieved. When such user reports come in make sure to investigate them and look for other indicators of ransomware. Therefore, it is important to properly train your first level support desk to handle these reports and first-hand investigation in a safe and timely manner.</p>
 <h3 id="network-traffic"><a class="header" href="#network-traffic">Network traffic</a></h3>
-<p>When searching for hints to ransomware infection one normally does not have to rely on network traffic since other indicators may be more present. When searching through traffic logs make sure to watch out for unusual DNS Traffic, direct connections to IP-addresses and not domains, unusual protocols and unusual ports as well as combinations of those. Also look out for internal connections originating from few systems to many others and clarify that these do not present a &quot;normal&quot; behaviour like administrative tasks. </p>
+<p>When searching for hints to ransomware infection one normally does not have to rely on network traffic since other indicators may be more present. When searching through traffic logs make sure to watch out for unusual DNS Traffic, direct connections to IP-addresses and not domains, unusual protocols and unusual ports as well as combinations of those. Also look out for internal connections originating from few systems to many others and clarify that these do not present a &quot;normal&quot; behaviour like administrative tasks.</p>
 <h3 id="abused-accounts"><a class="header" href="#abused-accounts">Abused Accounts</a></h3>
 <p>Admin and user accounts running havoc and being utilized at unusual times or for unusual action can be a sign of malicious activity in general.</p>
 <h3 id="unusual-executables-or-processes-that-launch-on-boot"><a class="header" href="#unusual-executables-or-processes-that-launch-on-boot">Unusual Executables or Processes (that launch on boot)</a></h3>
 <p>Executables files that pop up on one or more systems without any reasonable explanation as well as new auto-start entries are usually a bad sign.</p>
 <h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
-<p>Starting with the discovery phase it is crucial to create and continue a documentation of the planned and carried out actions as well as additional information and sightings belonging to the case. This way it is easily possible to on-board new members to the case, hand over to third parties and will be from great value for potential later involvement of authorities. Furthermore, this way improvement to the incident response processes and infrastructure can be easily derived later on. </p>
+<p>Starting with the discovery phase it is crucial to create and continue a documentation of the planned and carried out actions as well as additional information and sightings belonging to the case. This way it is easily possible to on-board new members to the case, hand over to third parties and will be from great value for potential later involvement of authorities. Furthermore, this way improvement to the incident response processes and infrastructure can be easily derived later on.</p>
 <h2 id="containment--mitigation"><a class="header" href="#containment--mitigation">Containment / Mitigation <a name="con"></a></a></h2>
 <p>Containment of a ransomware threat should better be done too broad then to little. Include at least all systems that show symptoms and incorporate all possible information you can get from the analysis steps.
 When containing the infection it can sometime be more effective to focus on the systems that are not infected or show no signs of infection and make sure that they can't get infected later on.</p>
