@@ -5,7 +5,7 @@ This Wiki is aimed at providing a go to collection for guides and tool reference
 This page is divided into two main parts:
 
 1. The [Playbooks](playbooks/README.md) section containing guides/playbooks for common IT-Security related incidents a organization or individual might have to tackle. These playbooks include preparation information as well as top down reference for what to do in the case of an active incident. The pages are designed in a way that allow for easy PDF export and are deployed as PDF in the GitHub repository.
-2. The [Forensic Wiki](wiki/general/README.md) section containing guides, best practices, tools and step by step instructions for common analysis tasks currently focusing in windows, *nix and cloud systems.
+2. The [Forensic Wiki](wiki/README.md) section containing guides, best practices, tools and step by step instructions for common analysis tasks currently focusing in windows, *nix and cloud systems.
 
 ## Contributing
 
