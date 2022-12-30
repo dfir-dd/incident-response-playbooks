@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'DFIR Wiki',
+  tagline: 'Shared knowledge for Digital Forensics and Incident Response',
   url: 'https://vault53.de', // Your website URL
   baseUrl: '/',
   projectName: 'DFIR-playbooks-and-wiki',
@@ -35,14 +35,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Explie/DFIR-playbooks-and-wiki/blob/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Explie/DFIR-playbooks-and-wiki/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -55,21 +55,27 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'DFIR Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'wiki/readme',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Wiki',
+          },
+          {
+            type: 'doc',
+            docId: 'playbooks/readme',
+            position: 'left',
+            label: 'Playbooks',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Explie/DFIR-playbooks-and-wiki',
             label: 'GitHub',
             position: 'right',
           },
@@ -82,8 +88,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Wiki',
+                to: '/docs/wiki',
               },
             ],
           },
@@ -113,12 +119,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Explie/DFIR-playbooks-and-wiki',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Vault53 built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
