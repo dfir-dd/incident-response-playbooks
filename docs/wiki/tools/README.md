@@ -1,23 +1,23 @@
 # Tools
 
-``` admonish warning title="This page is currently under construction"
+:::warning This page is currently under construction
 This page will be a reference to all the tools listed in this wiki
-```
+:::
 
-``` admonish tip
+:::tip
 Curated lists of forensic tools are also available from the SANS Institute, the Awesome Forensics GitHub List or in the Forensic Wiki.
 - [SANS Cyber Security Tools - DFIR](https://www.sans.org/tools/?focus-area=digital-forensics&msc=dfir-lp)
 - [Awesome Forensics GitHub](https://github.com/cugu/awesome-forensics)
 - [Forensics Wiki - Tools](https://forensicswiki.xyz/wiki/index.php?title=Category:Tools)
-```
+::: 
 
 ## Malware Analysis
 
 ### Malware Sandboxes
 
-``` admonish danger
+:::danger
 Be careful when uploading malware samples from active cases to public cloud systems as you may not want to let the attacker know you found some binaries from him. Use Hash-Search options first.
-```
+:::
 
 | Tool                    | Description                                                                                                                                                 | Platform         | Link                                                                 |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------|
@@ -31,9 +31,9 @@ Be careful when uploading malware samples from active cases to public cloud syst
 
 ### Malware Search Engines
 
-``` admonish danger
+:::danger
 Be careful when uploading malware samples from active cases to public cloud systems as you may not want to let the attacker know you found some binaries from him. Use Hash-Search options first.
-```
+:::
 
 | Tool       | Description                                                                                 | Platform | Link                                                       |
 |------------|---------------------------------------------------------------------------------------------|----------|------------------------------------------------------------|
