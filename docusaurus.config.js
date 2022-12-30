@@ -63,13 +63,19 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'wiki/readme',
+            docId: 'readme',
+            position: 'left',
+            label: 'Tutorial',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'wiki',
             position: 'left',
             label: 'Wiki',
           },
           {
-            type: 'doc',
-            docId: 'playbooks/readme',
+            type: 'docSidebar',
+            sidebarId: 'playbooks',
             position: 'left',
             label: 'Playbooks',
           },
