@@ -11,7 +11,7 @@ const config = {
   url: 'https://vault53.de', // Your website URL
   baseUrl: '/',
   projectName: 'DFIR-playbooks-and-wiki',
-  organizationName: 'explie',
+  organizationName: 'Explie',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
