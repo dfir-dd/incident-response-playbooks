@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DFIR Wiki',
-  tagline: 'Shared knowledge for Digital Forensics and Incident Response',
-  url: 'https://vault53.de', // Your website URL
+  tagline: 'Shared knowledge database for Digital Forensics and Incident Response',
+  url: 'https://www.it-forensics.wiki', // Your website URL
   baseUrl: '/',
   projectName: 'DFIR-playbooks-and-wiki',
   organizationName: 'Explie',
@@ -57,16 +57,10 @@ const config = {
       navbar: {
         title: 'Home',
         logo: {
-          alt: 'DFIR Logo',
+          alt: 'DFIR Wiki Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'readme',
-            position: 'left',
-            label: 'Tutorial',
-          },
           {
             type: 'docSidebar',
             sidebarId: 'wiki',
@@ -91,28 +85,53 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Wiki',
             items: [
               {
-                label: 'Wiki',
-                to: '/docs/wiki',
+                label: 'Getting Started',
+                to: '/docs/wiki/gettingstarted',
               },
+              {
+                label: 'Overview',
+                to: '/docs/wiki/overview',
+              },
+              {
+                label: 'Tools',
+                to: '/docs/wiki/tools',
+              }
             ],
           },
           {
-            title: 'Community',
+            title: 'Incident Response Playbooks',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Getting Started',
+                to: '/docs/playbooks/gettingstarted',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Ransomware',
+                to: '/docs/playbooks/ransomware',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Business Mail Compromise',
+                to: '/docs/playbooks/bec',
+              }
+            ],
+          },
+          {
+            title: 'Misc',
+            items: [
+              {
+                label: 'Contributors',
+                to: '/contributors',
+              },
+              {
+                label: 'Copyright',
+                to: '/copyright',
+              },
+              {
+                label: 'Impress',
+                to: '/impress',
               },
             ],
           },
@@ -130,7 +149,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Vault53 built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} IT-Forensics Wiki built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
