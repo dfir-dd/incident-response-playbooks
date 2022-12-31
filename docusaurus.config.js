@@ -13,7 +13,7 @@ const config = {
   projectName: 'DFIR-playbooks-and-wiki',
   organizationName: 'Explie',
   trailingSlash: false,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
