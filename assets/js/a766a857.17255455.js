@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdfir_playbooks_and_wiki=self.webpackChunkdfir_playbooks_and_wiki||[]).push([[1342],{6018:s=>{s.exports=JSON.parse('{"label":"Windows","permalink":"/docs/tags/windows","allTagsPath":"/docs/tags","count":1,"items":[{"id":"tools/windows","title":"Windows Analysis Tools","description":"","permalink":"/docs/tools/windows"}]}')}}]);

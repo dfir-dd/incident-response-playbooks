@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdfir_playbooks_and_wiki=self.webpackChunkdfir_playbooks_and_wiki||[]).push([[9089],{8299:s=>{s.exports=JSON.parse('{"label":"Frameworks","permalink":"/docs/tags/frameworks","allTagsPath":"/docs/tags","count":1,"items":[{"id":"tools/suites","title":"Forensic Analysis Suites/ Frameworks","description":"","permalink":"/docs/tools/suites"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdfir_playbooks_and_wiki=self.webpackChunkdfir_playbooks_and_wiki||[]).push([[968],{4205:a=>{a.exports=JSON.parse('{"label":"Data Gathering","permalink":"/docs/tags/data-gathering","allTagsPath":"/docs/tags","count":1,"items":[{"id":"tools/datagathering","title":"Data Gathering Tools","description":"","permalink":"/docs/tools/datagathering"}]}')}}]);

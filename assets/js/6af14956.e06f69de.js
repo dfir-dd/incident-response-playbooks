@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdfir_playbooks_and_wiki=self.webpackChunkdfir_playbooks_and_wiki||[]).push([[8221],{6567:s=>{s.exports=JSON.parse('{"label":"Linux","permalink":"/docs/tags/linux","allTagsPath":"/docs/tags","count":1,"items":[{"id":"tools/nix","title":"nix Analysis Tools","description":"","permalink":"/docs/tools/nix"}]}')}}]);

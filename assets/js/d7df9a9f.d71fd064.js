@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdfir_playbooks_and_wiki=self.webpackChunkdfir_playbooks_and_wiki||[]).push([[1898],{7321:a=>{a.exports=JSON.parse('{"label":"Malware","permalink":"/docs/tags/malware","allTagsPath":"/docs/tags","count":1,"items":[{"id":"tools/malware","title":"Malware Analysis/ Reverse-Engineering Tools","description":"","permalink":"/docs/tools/malware"}]}')}}]);
