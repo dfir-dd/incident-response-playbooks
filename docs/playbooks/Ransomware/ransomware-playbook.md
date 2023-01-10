@@ -1,3 +1,12 @@
+---
+id: ransomware-playbook
+slug: /playbooks/Ransomware/
+title: Incident Response Playbook - Ransomware Infection
+tags:
+  - Playbooks
+  - Ransomware
+---
+
 # Incident Response Playbook - Ransomware Infection
 
 ## Metadata
