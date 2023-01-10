@@ -1,3 +1,13 @@
+---
+id: bec-playbook
+slug: /playbooks/bec/
+title: Incident Response Playbook - Business Mail Compromise
+tags:
+  - Playbooks
+  - BEC
+  - Mail
+---
+
 # Incident Response Playbook - Business Mail Compromise
 
 ## Metadata

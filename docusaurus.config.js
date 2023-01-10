@@ -111,15 +111,15 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/wiki/gettingstarted',
+                to: '/docs/wiki/',
               },
               {
-                label: 'Overview',
-                to: '/docs/wiki/overview',
+                label: 'Windows',
+                to: '/docs/wiki/windows',
               },
               {
-                label: 'Tools',
-                to: '/docs/wiki/tools',
+                label: 'NIX',
+                to: '/docs/wiki/NIX',
               }
             ],
           },
@@ -128,7 +128,7 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/playbooks/gettingstarted',
+                to: '/docs/playbooks/',
               },
               {
                 label: 'Ransomware',
@@ -138,6 +138,23 @@ const config = {
                 label: 'Business Mail Compromise',
                 to: '/docs/playbooks/bec',
               }
+            ],
+          },
+          {
+            title: 'Tools',
+            items: [
+              {
+                label: 'Getting Started',
+                to: '/docs/tools/',
+              },
+              {
+                label: 'Windows',
+                to: '/docs/tools/windows',
+              },
+              {
+                label: 'NIX',
+                to: '/docs/tools/nix',
+              },
             ],
           },
           {

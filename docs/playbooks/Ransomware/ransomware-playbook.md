@@ -1,6 +1,6 @@
 ---
 id: ransomware-playbook
-slug: /playbooks/Ransomware/
+slug: /playbooks/ransomware/
 title: Incident Response Playbook - Ransomware Infection
 tags:
   - Playbooks
