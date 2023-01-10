@@ -17,6 +17,22 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        lunr: {
+          titleBoost: 8,
+          contentBoost: 1,
+          tagsBoost: 5,
+        }
+      },
+    ],
+  ],
+
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -45,7 +61,7 @@ const config = {
             'https://github.com/Explie/DFIR-playbooks-and-wiki/blob/main/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [require.resolve('./src/css/custom.css'), require.resolve('./src/css/bootstrap-grid.min.css'), require.resolve('./src/css/bootstrap-utilities.min.css')],
         },
       }),
     ],
@@ -73,7 +89,13 @@ const config = {
             position: 'left',
             label: 'Playbooks',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docSidebar',
+            sidebarId: 'tools',
+            position: 'left',
+            label: 'Tools',
+          },
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/Explie/DFIR-playbooks-and-wiki',
             label: 'GitHub',
