@@ -3,13 +3,14 @@
 ## Metadata
 
 |                   |                                                   |
-|-------------------|---------------------------------------------------|
-| **ID**            | IR-001                                         |
-| **Language**      | EN                                                    |
+| ----------------- | ------------------------------------------------- |
+| **ID**            | IR-001                                            |
+| **Language**      | EN                                                |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
-| **Last Modified** | 2021-04-18                                        |
+| **Last Modified** | 2024-04-25                                        |
 | **Status**        | Draft                                             |
 | **Created**       | 2020-12-20                                        |
+| **Authors**       | Tobias Kasch (Explie)                             |
 
 ## Content
 
@@ -25,34 +26,38 @@
 
 ## Description <a name="desc"></a>
 
-Ransomware attacks can be characterized by infecting large segments of an existing network and encrypting data on server and client systems without the possibility for the legitimate users to get access to this data. The decryption key/mechanism will then be presented to the legitimate user by the attacker in exchange for a more or less reasonable amount of money, most likely in the form of digital currency like bitcoin. The attacker will leave information on the encrypted system on how to contact them for payment and retrieving the decryption methods.  
-Ransomware became one of the most lucrative cyberattacks in the recent years and is often spread with phishing campaigns against end users or by exploiting unpatched vulnerabilities in external facing systems. Most times the attackers have had deep system access for a long time before the actual encryption of data.  
-In the event of a ransomware-attack fast response is critical since this could stop ongoing encryption and lateral movement. Most times a hard organization-wide shutdown can't be avoided, but the recovery time can highly depend upon the maturity of the incident response program of the organization.   
-Ransomware events are most likely only the end of an ongoing infiltration of a network. In many cases the attackers will already mapped your network and gathered credentials long before. Even the extortion of data over a long time span is not uncommon nowadays.  
-Ransomware in particular is still mostly focused on Windows based systems and domains. The recommendations in this playbook aim to be universal but may sometimes be specific to Windows systems.
+Ransomware incidents are characterized by encrypting data on server and client systems without the possibility for the legitimate users to get access to the data. The decryption key/mechanism will then be presented to the legitimate user by the attacker in exchange for a defined amount of money, most likely in the form of digital currency like [bitcoin](https://en.wikipedia.org/wiki/Bitcoin). The attacker will leave information on the encrypted system on how to contact them for payment and retrieving the decryption methods. Ransomware attacks are often paired with data exfiltration. The attackers threaten to release or sell the stolen data if no payment is recieved putting additional pressure on the victims.
+
+Ransomware became one of the most lucrative cyberattacks in the recent years. It is often spread with phishing campaigns against users or by exploiting unpatched vulnerabilities in external facing systems. In many times the attackers have had access to internal systems for a long time before the actual encryption of data. Although recently the time between initial infection and encryption is getting shorter.
+
+In the event of a ransomware attack fast response is critical since this could stop an ongoing encryption or the lateral movement of the attackers through the network. Most times an organization-wide shutdown can't be avoided, but the recovery time can highly depend upon the maturity of the incident response and recovery capabilities of the affected organization.
+
+Ransomware events are most likely only the last step of an ongoing infiltration of a network and are supposed to create noise and distortion. In many cases the attackers will have already mapped the network and gathered credentials long before.
+
+Ransomware in particular is still mostly focused on Windows based systems and windows domains. The recommendations in this playbook  aim to be universal while still honoring windows specifics.
 
 ## Safeguards <a name="safe"></a>
 
-These Safeguards are designed to limit the spread and/or impact of a potential ransomware infection. Since ransomware infections often come with wide-spread network compromise the safeguards are also focused on this part.
+The follwoing safeguards may help to limit the spread and/or impact of a potential ransomware attack. Since ransomware is often paired with wide-spread lateral movement through a network the safeguards mentioned also focus on this part.
 
 ### Mature Patch Management
 
 When preparing for cyberattacks in general it is highly advised to implement available patches in a safe and fast manner. This way known vulnerabilities can be tackled and the exploitation of these can be stopped.  
 It is important to keep in mind that not only all available components including network components (routers, switches, etc), servers, endpoints and appliances including security appliances need to be in focus. Also patches need to be tested for the internal use and then applied to the systems in focus within a reasonable time frame depending on the criticality of the issues being fixed.  
-Components that are not longer supported by the vendor or an active community should not be used or only used with great care and additional and appropriate safeguards. 
+Components that are not longer supported by the vendor or an active community should not be used or only used with great care and additional and appropriate safeguards.
 
 ### Endpoint Protection
 
 Endpoint protection is about blocking unauthorized changes to a system and to stop the execution of malicious code.  
 This is normally done with (next-gen) anti-virus software that should always be kept up to date. For systems without support for such software application and execution whitelist could be used.  
-Endpoint protection need to span on server and client systems and should be configured to alert in a centralized and immediate manner. 
+Endpoint protection need to span on server and client systems and should be configured to alert in a centralized and immediate manner.
 
 ### Network segmentation
 
 Network segmentation is about separating the network in multiple network zones that house systems of similar use. A very basic separation could be a three tier network architecture with Client-Zone, Server-Zone and DMZ for Server with external accessibility (internet).  
 The aim of network segmentation is to limit, control and log the network traffic between the different network zones. When this is properly implemented it could be possible to limit the access from the Client-Zone to the Server-Zone to the necessary ports (Web, Mail, ERP...) and block all other access.  
 The more granular and restrictive a network segmentation is built the better, but it also gets more troubling to manage. A good configuration management is key to achieve this.  
-Network segmentation can for example be achieved with multiple firewall-interfaces, other means of VLAN or ACLs on managed switches. When creating a network segmentation the different network segments should be thoroughly planned and involve all available systems (including Virtual Machines and Networks). 
+Network segmentation can for example be achieved with multiple firewall-interfaces, other means of VLAN or ACLs on managed switches. When creating a network segmentation the different network segments should be thoroughly planned and involve all available systems (including Virtual Machines and Networks).
 
 ### Backup Strategy
 
@@ -62,7 +67,7 @@ The backup should follow some criteria to ensure usability in the case of an inc
 * Backups should be regularly and stored off-site or at least offline to ensure that they can't be reached by a potential attacker that has infiltrated the network
 * Backup-Server should not be included in the domain and use dedicated accounts to hinder attackers that have acquired a valid domain admin account. 
 * Backups should be done on a regular basis according to the criticality of the data to the business. For some data it may be required to only lose some minutes or hours in the event of data loss and for other information days or weeks may be fine. 
-* Replaying backups should be tested from time to time to ensure that the process is working and that data can be restored within a reasonable time frame. 
+* Replaying backups should be tested from time to time to ensure that the process is working and that data can be restored within a reasonable time frame.
 
 ### Restrict Administrative Accounts
 

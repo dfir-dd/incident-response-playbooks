@@ -16,6 +16,7 @@ This section will include all necessary metadata fields to map and classify the 
 | **Last Modified** | Date                                  |
 | **Status**        | Placeholder/Draft/Final               |
 | **Created**       | Date                                  |
+| **Authors**       | Authors by real name or twitter handle|
 
 * **Description**
 Short description of the attack type and common information that is good to know.
