@@ -1,19 +1,11 @@
----
-id: ransomware-playbook
-slug: /playbooks/ransomware/
-title: Incident Response Playbook - Ransomware Infection
-tags:
-  - Playbooks
-  - Ransomware
----
-
 # Incident Response Playbook - Ransomware Infection
 
 ## Metadata
 
 |                   |                                                   |
 |-------------------|---------------------------------------------------|
-| **ID**            | IR-EN-001                                         |
+| **ID**            | IR-001                                         |
+| **Language**      | EN                                                    |
 | **Title**         | Incident Response Playbook - Ransomware Infection |
 | **Last Modified** | 2021-04-18                                        |
 | **Status**        | Draft                                             |

@@ -1,20 +1,11 @@
----
-id: bec-playbook
-slug: /playbooks/bec/
-title: Incident Response Playbook - Business Mail Compromise
-tags:
-  - Playbooks
-  - BEC
-  - Mail
----
-
 # Incident Response Playbook - Business Mail Compromise
 
 ## Metadata
 
 |                   |                                                       |
 |-------------------|-------------------------------------------------------|
-| **ID**            | IR-EN-003                                             |
+| **ID**            | IR-003                                             |
+| **Language**      | EN                                                    |
 | **Title**         | Incident Response Playbook - Business Mail Compromise |
 | **Last Modified** | 2022-08-11                                            |
 | **Status**        | Draft                                                 |

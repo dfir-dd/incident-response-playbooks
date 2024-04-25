@@ -10,7 +10,8 @@ This section will include all necessary metadata fields to map and classify the 
 
 | | |
 |-|-|
-| **ID**            | IR-`language code>`-`<incrementing ID>` |
+| **ID**            | IR-`<incrementing ID>` |
+| **Language**      | EN                                    |
 | **Title**         | Title of the playbook                 |
 | **Last Modified** | Date                                  |
 | **Status**        | Placeholder/Draft/Final               |
@@ -49,9 +50,7 @@ It is planned to design the playbooks according to multiple standards and format
 Focus lays in PDF and Markdown Playbooks but other sources may be included.
 
 **Currently planned:**
-``` admonish info title="Planned output formats for Playbook"
 * PDF
 * Markdown
 * Hive Template
 * COPS
-```

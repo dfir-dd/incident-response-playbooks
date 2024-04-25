@@ -4,7 +4,8 @@
 
 | | |
 |-|-|
-| **ID**            | IR-EN-002     |
+| **ID**            | IR-002     |
+| **Language**      | EN                                                    |
 | **Title**         | Incident Response Playbook - DoS and DDoS Attacks |
 | **Last Modified** | 2021-03-09    |
 | **Status**        | Draft         |
