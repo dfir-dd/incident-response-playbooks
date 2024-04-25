@@ -19,8 +19,6 @@ DDoS is a distributed DoS attack which means that a big amount of different syst
 
 (D)DoS attacks are very loud and easy identifiable in the means that you will most likely get to know them the moment they are occuring or only some little time later. Therefore they are also a good tool for an attacker to draw your attention away from other things that they may be trying in the meantine. Keep this in mind when reacting to (D)DoS attacks.
 
-
-
 ## Safeguards
 
 These Safeguards are designed to limit the impact and/or increase reaction possibilities in the case of DoS and DDoS attacks. 
